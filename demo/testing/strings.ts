@@ -4,6 +4,9 @@
 // tests you'll need to make a file having a filename of the file you want to
 // test, followed by `.test.ts`. For this demo, the test filename should be
 // `strings.test.ts`.
+//
+// Useful links:
+// https://jestjs.io/
 
 // A basic function that concatenates two strings.
 export function concat(a: string, b: string): string {

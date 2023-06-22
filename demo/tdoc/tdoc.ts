@@ -1,11 +1,12 @@
 /* eslint-disable */
 import { strict as assert } from "assert";
 
+// Useful links:
+// https://typedoc.org/
 
 export function sqrt(x: number): number {
   return Math.sqrt(x);
 }
-
 
 export interface User {
   /** The unique identifier for the user. */
@@ -15,7 +16,6 @@ export interface User {
   /** The user's email address. */
   email: string;
 }
-
 
 export async function fetchUser(id: number): Promise<User> {
   const response = await fetch(`/users/${id}`);

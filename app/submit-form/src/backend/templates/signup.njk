@@ -1,0 +1,53 @@
+{% extends "main.njk" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<div class="flex flex-row justify-center w-full mt-5">
+  <div class="bg-base-300 flex flex-col w-80 p-6 rounded-md">
+    <div class="mb-8 text-center">
+      <h1 class="my-3 text-4xl font-bold">Sign up</h1>
+      <p class="text-sm ">Create an account</p>
+    </div>
+    <form method="POST" action="/account/signup" class="space-y-8">
+      {% include "server_message.njk" %}
+      <div class="space-y-4">
+        <div class="form-control w-full max-w-xs">
+          <label for="email" class="label">
+            <span class="label-text">Email address</span>
+          </label>
+          <input required type="email" name="email" id="email" placeholder="name@example.com"
+            class="input input-bordered w-full max-w-xs text-primary-content">
+          <p class="hidden text-sm bg-error text-base-300 mt-2 p-2 rounded" id="invalid-email">Email address must use
+            format: name@example.com</p>
+        </div>
+        <div class="form-control w-full max-w-xs">
+          <label for="email" class="label">
+            <span class="label-text">Password</span>
+            <span class="label-text-alt"><a href="#" class="link-primary">Forgot password?</a></span>
+          </label>
+          <input required type="password" name="password" id="password" placeholder="******"
+            class="input input-bordered w-full max-w-xs text-primary-content">
+          <p class="hidden text-sm bg-error text-base-300 mt-2 p-2 rounded" id="invalid-password">Password must be at
+            least 8 characters.</p>
+        </div>
+        <div class="form-control">
+          <label class="label cursor-pointer">
+            <span class="label-text">I agree to the <a rel="noopener noreferrer" href="#"
+                class="hover:underline link-primary">terms of service</a></span>
+            <input id="agree-tos" name="agreedToTerms" checked="false" type="checkbox"
+              class="checkbox checkbox-primary" />
+          </label>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-5">
+        <button id="form-submit" type="submit" class="btn-disabled btn btn-primary">Sign up</button>
+        <p class="px-6 text-sm text-center ">Existing user?
+          <a rel="noopener noreferrer" href="/" class="hover:underline link-primary">Sign in</a>.
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="module" src="./signup.js"></script>
+{% endblock %}

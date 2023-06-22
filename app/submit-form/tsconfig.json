@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "typeRoots": [
+      "./src/backend/types"
+    ]
+  }
+}

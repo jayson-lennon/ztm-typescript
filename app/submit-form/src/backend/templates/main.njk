@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+
+<head>
+  {% include "header.njk" %}
+  {% block header %}{% endblock %}
+  <title>
+    {% block title %}Form Example{% endblock %}
+  </title>
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+
+  {% include "devserver.njk" %}
+
+</body>
+
+</html>

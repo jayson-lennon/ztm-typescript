@@ -22,6 +22,33 @@
 
 import { strict as assert } from "assert";
 
+class Collection<T> {
+  private readonly items: T[] = [];
+
+  constructor(initialItems: T[]) {
+    this.items = initialItems;
+  }
+
+  addItem(item: T): void {
+    this.items.push(item);
+  }
+
+  removeItem(item: T): void {
+    const index = this.items.indexOf(item);
+    if (index !== -1) {
+      this.items.splice(index, 1);
+    }
+  }
+
+  getItems(): T[] {
+    return this.items;
+  }
+
+  filterItems(predicate: (item: T) => boolean): T[] {
+    return this.items.filter(predicate);
+  }
+}
+
 interface Book {
   title: string;
   author: string;
@@ -33,3 +60,13 @@ const book2 = { title: "Book 2", author: "Author 2", year: 2022 };
 const book3 = { title: "Book 3", author: "Author 3", year: 2023 };
 const libraryBooks = [book1, book2];
 
+const bookCollection = new Collection<Book>(libraryBooks);
+
+bookCollection.addItem(book3);
+assert.equal(bookCollection.getItems().length, 3);
+
+bookCollection.removeItem(book1);
+assert.equal(bookCollection.getItems().length, 2);
+
+const filteredBooks = bookCollection.filterItems(book => book.year >= 2023);
+assert.equal(filteredBooks.length, 1);

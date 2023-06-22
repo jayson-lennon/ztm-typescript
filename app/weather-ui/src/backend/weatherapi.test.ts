@@ -1,3 +1,8 @@
+import axios from "axios";
+import MockAdapter from "axios-mock-adapter";
+import { CurrentWeather, CurrentWeatherApiResponse, currentWeatherApiResponseSchema, fetchWeatherData } from "./weatherapi";
+import { strict as assert } from "assert";
+
 const SAMPLE_API_RESPONSE = {
   latitude: 36.16438,
   longitude: -115.143936,
@@ -39,3 +44,87 @@ const SAMPLE_API_RESPONSE = {
     ]
   }
 }
+
+it("should convert API request", async () => {
+  // makes `axios` to use the mock instead of making an actual request
+  const httpClient = new MockAdapter(axios);
+
+  const WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast";
+
+  httpClient.onGet(WEATHER_API_URL, {
+    params: {
+      latitude: "0.0",
+      longitude: "0.0",
+      hourly: "temperature_2m",
+      temperature_unit: "celsius",
+      current_weather: true,
+      forecast_days: 1,
+    }
+  }).reply(200, SAMPLE_API_RESPONSE);
+
+  // this will throw an error if it fails, which will mark the test as a failure
+  await fetchWeatherData(axios, WEATHER_API_URL, "0.0", "0.0");
+});
+
+it("throws error when response is not 200", async () => {
+  // makes `axios` to use the mock instead of making an actual request
+  const httpClient = new MockAdapter(axios);
+
+  const WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast";
+
+  httpClient.onGet(WEATHER_API_URL, {
+    params: {
+      latitude: "0.0",
+      longitude: "0.0",
+      hourly: "temperature_2m",
+      temperature_unit: "celsius",
+      current_weather: true,
+      forecast_days: 1,
+    }
+  }).reply(400, {});
+
+  // this will throw an error if it fails, which will mark the test as a failure
+  await expect(fetchWeatherData(axios, WEATHER_API_URL, "0.0", "0.0")).rejects.toThrow();
+});
+
+it("throws error when the API response changes", async () => {
+  // makes `axios` to use the mock instead of making an actual request
+  const httpClient = new MockAdapter(axios);
+
+  const WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast";
+
+  httpClient.onGet(WEATHER_API_URL, {
+    params: {
+      latitude: "0.0",
+      longitude: "0.0",
+      hourly: "temperature_2m",
+      temperature_unit: "celsius",
+      current_weather: true,
+      forecast_days: 1,
+    }
+  }).reply(200, {});
+
+  // this will throw an error if it fails, which will mark the test as a failure
+  await expect(fetchWeatherData(axios, WEATHER_API_URL, "0.0", "0.0")).rejects.toThrow();
+});
+
+it("gets low temp", () => {
+  const response: CurrentWeatherApiResponse = currentWeatherApiResponseSchema.parse(SAMPLE_API_RESPONSE);
+  const currentWeather = new CurrentWeather(response);
+  const lowTemp = currentWeather.lowTemp();
+  assert.equal(lowTemp, 23.3);
+});
+
+it("gets high temp", () => {
+  const response: CurrentWeatherApiResponse = currentWeatherApiResponseSchema.parse(SAMPLE_API_RESPONSE);
+  const currentWeather = new CurrentWeather(response);
+  const highTemp = currentWeather.highTemp();
+  assert.equal(highTemp, 33.5);
+});
+
+it("gets condition", () => {
+  const response: CurrentWeatherApiResponse = currentWeatherApiResponseSchema.parse(SAMPLE_API_RESPONSE);
+  const currentWeather = new CurrentWeather(response);
+  const condition = currentWeather.condition();
+  assert.equal(condition, "Clear sky");
+});

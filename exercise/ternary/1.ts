@@ -10,3 +10,18 @@
 
 import { strict as assert } from "assert";
 
+function celsiusToFahrenheit(degreesC: number): number {
+  return (degreesC * 1.8) + 32;
+}
+
+function fahrenheitToCelsius(degreesF: number): number {
+  return (degreesF - 32) / 1.8
+}
+
+function convertTempTo(temp: number, toUnit: "C" | "F"): number {
+  return toUnit === "C" ? fahrenheitToCelsius(temp) : celsiusToFahrenheit(temp);
+}
+
+assert.equal(convertTempTo(25, "F"), 77);
+assert.equal(convertTempTo(68, "C"), 20);
+

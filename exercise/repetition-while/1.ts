@@ -20,6 +20,18 @@ const users = [
   { id: 6, durations: [19, 11, 33], total: 0 },
 ];
 
+let i = 0;
+while (i < users.length) {
+  if (users[i].total === 0 && users[i].durations.length > 0) {
+    let sum = 0;
+    for (let s = 0; s < users[i].durations.length; s++) {
+      sum += users[i].durations[s];
+    }
+    users[i].total = sum;
+  }
+  i += 1;
+}
+
 assert.deepStrictEqual(users, [
   { id: 1, durations: [30, 16, 9], total: 55 },
   { id: 2, durations: [12, 31, 35], total: 78 },

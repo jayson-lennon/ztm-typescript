@@ -14,3 +14,17 @@ import { strict as assert } from "assert";
 
 const scores = [90, 77, 83, 96, 76, 88];
 
+function calcAverage(scores: number[]): number {
+  let sum = 0;
+  for (let i = 0; i < scores.length; i++) {
+    sum += scores[i];
+  }
+  return sum / scores.length;
+}
+
+let average = calcAverage(scores);
+assert.equal(average, 85);
+
+scores.push(92);
+average = calcAverage(scores);
+assert.equal(average, 86);

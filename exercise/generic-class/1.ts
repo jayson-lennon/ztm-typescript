@@ -18,3 +18,29 @@
 // 7. Assert that only "World" remains in the queue
 
 import { strict as assert } from "assert";
+
+class Queue<T> {
+  private readonly items: T[] = [];
+
+  enqueue(item: T): void {
+    this.items.push(item);
+  }
+
+  dequeue(): T | undefined {
+    return this.items.shift();
+  }
+
+  getAll(): T[] {
+    return this.items;
+  }
+}
+
+const stringQueue = new Queue<string>();
+stringQueue.enqueue("Hello");
+stringQueue.enqueue("World");
+
+const item = stringQueue.dequeue();
+assert.equal(item, "Hello");
+
+const allItems = stringQueue.getAll();
+assert.deepStrictEqual(allItems, ["World"]);

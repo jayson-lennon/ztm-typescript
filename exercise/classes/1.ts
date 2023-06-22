@@ -49,3 +49,68 @@
 // - Assert that you _do not_ get "gold" and 900 again
 
 import { strict as assert } from "assert";
+
+class Health {
+  value: number;
+  max: number;
+
+  constructor(initial: number, max: number) {
+    this.value = initial;
+    this.max = max;
+  }
+
+  restore(amount: number): void {
+    if (amount >= 0) {
+      if (amount + this.value >= this.max) {
+        this.value = this.max;
+      } else {
+        this.value += amount;
+      }
+    }
+  }
+
+  damage(amount: number): void {
+    if (amount >= 0) {
+      if (this.value - amount <= 0) {
+        this.value = 0;
+      } else {
+        this.value -= amount;
+      }
+    }
+  }
+}
+
+type Treasure = string;
+
+class TreasureChest {
+  contents: Treasure;
+  quantity: number;
+
+  constructor(contents: Treasure, quantity: number) {
+    this.contents = contents;
+    this.quantity = quantity;
+  }
+
+  open(): [Treasure, number] {
+    const contents = this.contents;
+    const quantity = this.quantity;
+    this.contents = "empty";
+    this.quantity = 0;
+    return [contents, quantity];
+  }
+}
+
+const playerHealth = new Health(100, 200);
+playerHealth.restore(30);
+assert.equal(playerHealth.value, 130);
+playerHealth.restore(500);
+assert.equal(playerHealth.value, 200);
+playerHealth.damage(500);
+assert.equal(playerHealth.value, 0);
+
+const goldChest = new TreasureChest("gold", 900);
+const [treasure, amount] = goldChest.open();
+assert.strictEqual(treasure, "gold");
+assert.strictEqual(amount, 900);
+assert.deepStrictEqual(goldChest.open(), ["empty", 0]);
+

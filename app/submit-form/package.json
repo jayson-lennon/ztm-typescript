@@ -22,9 +22,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@tsconfig/strictest": "^2.0.1",
+    "@types/bcrypt": "^5.0.0",
     "@types/core-js": "^2.5.5",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.1.0",
+    "@types/nunjucks": "^3.2.2",
+    "@types/sqlite3": "^3.1.8",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
     "concurrently": "^8.0.1",
@@ -42,12 +45,25 @@
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "zod": "^3.21.4"
   },
   "engines": {
     "node": ">=18.9.1"
   },
   "dependencies": {
-    "daisyui": "^2.51.6"
+    "@fastify/cookie": "^8.3.0",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^6.10.1",
+    "@types/uuid": "^9.0.1",
+    "bcrypt": "^5.1.0",
+    "daisyui": "^2.51.6",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "fastify-plugin": "^4.5.0",
+    "nunjucks": "^3.2.4",
+    "promised-sqlite3": "^2.0.1",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.0"
   }
 }

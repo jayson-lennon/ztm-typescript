@@ -13,8 +13,8 @@
     "dev": "concurrently \"pnpm dev:tailwind\" \"pnpm dev:backend\" \"pnpm dev:frontend\" \"pnpm dev:reload\"",
     "dev:tailwind": "tailwindcss -w -i src/backend/templates/index.css -o dist/styles.css",
     "dev:backend": "nodemon -w ./src -e ts,njk,css --exec ts-node src/backend/server.ts",
-    "dev:reload": "pnpm livereload -w 2500 -e html,css,njk,ts",
     "dev:frontend": "nodemon -w ./src -e ts --exec node build-frontend.js",
+    "dev:reload": "pnpm livereload -w 2500 -e html,css,njk,ts",
     "test": "jest",
     "lint": "eslint",
     "check": "node check.js"

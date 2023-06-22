@@ -15,3 +15,43 @@
 
 import { strict as assert } from "assert";
 
+interface Square {
+  kind: 'square';
+  sideLength: number;
+}
+
+interface Rectangle {
+  kind: 'rectangle';
+  width: number;
+  height: number;
+}
+
+interface Circle {
+  kind: 'circle';
+  radius: number;
+}
+
+type Shape = Square | Rectangle | Circle;
+
+function calculateArea(shape: Shape): number {
+  switch (shape.kind) {
+    case 'square':
+      return shape.sideLength * shape.sideLength;
+    case 'rectangle':
+      return shape.width * shape.height;
+    case 'circle':
+      return Math.PI * shape.radius * shape.radius;
+    default:
+      throw new Error('Invalid shape');
+  }
+}
+
+// Example usage
+const square: Shape = { kind: 'square', sideLength: 5 };
+const rectangle: Shape = { kind: 'rectangle', width: 4, height: 6 };
+const circle: Shape = { kind: 'circle', radius: 3 };
+
+assert.equal(calculateArea(square), 25);
+assert.equal(calculateArea(rectangle), 24);
+assert.equal(calculateArea(circle), Math.PI * 9);
+

@@ -12,3 +12,20 @@
 
 import { strict as assert } from "assert";
 
+class LengthRestricted {
+  value: string;
+  constructor(input: string, maxLength: number) {
+    if (input.length > maxLength) {
+      throw new Error(`input string '${input}' exceeds max length of ${maxLength}`);
+    } else {
+      this.value = input;
+    }
+  }
+}
+
+const ok = new LengthRestricted("ok", 5);
+
+assert.throws(() => {
+  const crash = new LengthRestricted("crash", 2);
+});
+

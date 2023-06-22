@@ -28,3 +28,16 @@
 
 const age = 25;
 
+if (age >= 18) {
+  console.log("ok to purchase");
+} else {
+  console.log("cannot purchase");
+}
+
+if (age >= 18 && age < 65) {
+  console.log("adult");
+} else if (age > 65) {
+  console.log("senior");
+} else {
+  console.log("child");
+}

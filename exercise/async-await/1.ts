@@ -23,3 +23,16 @@ async function getUser(): Promise<User> {
   });
 }
 
+async function fetchUserData(): Promise<User | undefined> {
+  try {
+    const user = await getUser();
+    console.log(`user name: ${user.name}`);
+    return user;
+  } catch (error) {
+    console.log("Error fetching user data:", error);
+    return undefined;
+  }
+}
+
+fetchUserData();
+

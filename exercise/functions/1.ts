@@ -9,3 +9,17 @@
 
 import { strict as assert } from "assert";
 
+
+function firstName(): string {
+  return "John";
+}
+
+function lastName(): string {
+  return "Doe";
+}
+
+function fullName(first: string, last: string): string {
+  return `${first} ${last}`;
+}
+
+console.log(fullName(firstName(), lastName()));

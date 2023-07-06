@@ -6,7 +6,7 @@ import { strict as assert } from "assert";
 // value. You can use any type of value as the key, including objects and
 // functions. Maps are useful when you want to quickly access data and you are
 // able to maintain the key in memory. In situations where you have to search
-// (you don't have a key) for the data you need, a difference data structure
+// (you don't have a key) for the data you need, a different data structure
 // would be more appropriate.
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map

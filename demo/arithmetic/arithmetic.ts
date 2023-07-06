@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { strict as assert } from "assert";
 
-// TODO: add ref links to main branch
-// TODO: remake repo: add solutions as branch with added code instead of deleted code
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 const add = 1 + 1; // 2

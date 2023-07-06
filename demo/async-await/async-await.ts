@@ -2,7 +2,7 @@
 import { strict as assert } from "assert";
 
 // `async/await` allows you to write asynchronous code in a synchronous way.
-// The `async` keyword used with a function or closure creates asynchronous
+// The `async` keyword used with a function or closure creates an asynchronous
 // context. The `await` keyword can be used inside an asynchronous context to
 // wait for a `Promise` to resolve before moving on to the next line of code.
 // When the promise resolves, the value is returned and assigned to the

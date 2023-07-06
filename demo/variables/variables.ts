@@ -4,7 +4,7 @@
 // be used to store a wide range of data types, such as numbers, strings, and
 // arrays. A variable is declared by specifying its name, data type, and
 // optionally an initial value. Once a variable is declared, it can be read
-// potentially updated in other parts of the program.
+// or updated in other parts of the program.
 
 // string
 const courseName = "typescript";

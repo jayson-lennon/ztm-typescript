@@ -23,3 +23,7 @@ assert.equal(denyPurchase, false);
 const two = 2;
 const isThree = 1 + two === 3;
 assert.equal(isThree, true);
+
+// is not equal to
+const isNotThree = 1 + two !== 10;
+assert.equal(isThree, true);

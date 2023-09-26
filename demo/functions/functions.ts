@@ -66,7 +66,7 @@ assert.equal(twentyTwo, 22);
   const twenty = minus(30, 11) + 1;
   assert.equal(twenty, 20);
   const twentyTwo = sum(two, twenty);
-  assert.equal(twenty, 22);
+  assert.equal(twentyTwo, 22);
 
   // Arguments to functions are also expressions, so we can do this
   // as well:

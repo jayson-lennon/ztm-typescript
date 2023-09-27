@@ -1,3 +1,11 @@
+# Typescript Bootcamp
+
+GH repository following the great TypeScript Bootcamp from ZTM:
+
+https://zerotomastery.io/courses/typescript-bootcamp/
+
+forked from @jayson-lennon at https://github.com/jayson-lennon/ztm-typescript
+
 ## Running a Demo
 
 Using `ts-node`:

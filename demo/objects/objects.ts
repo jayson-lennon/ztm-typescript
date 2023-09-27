@@ -68,6 +68,8 @@ const anotherOrigin = { x: 0, y: 0, z: 0 };
 printCoord(anotherOrigin); // 0 0
 
 // Objects can contain other objects & objects can be nested:
+type PersonName = string;
+
 type Location = {
   coord: Coordinate;
   name: PersonName;

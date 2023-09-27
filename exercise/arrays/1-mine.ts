@@ -53,23 +53,42 @@ import { strict as assert } from "assert";
 const ranking = [3, 4, 1, 2];
 const teams = ["red", "blue", "green", "yellow"];
 
-const firstRanks = ranking.splice(2, 2);
-const newRanking = firstRanks.concat(ranking);
+const sortNumberArray = (array: number[]): number[] => {
+  const arrayEnd: number[] = array.splice(0, 2);
+  array.push(arrayEnd[0]);
+  array.push(arrayEnd[1]);
 
-const firstTeams = teams.splice(2, 2);
-const newTeams = firstTeams.concat(teams);
+  return array;
+};
 
-assert.deepEqual(newRanking, [1, 2, 3, 4]);
-assert.deepEqual(newTeams, ["green", "yellow", "red", "blue"]);
+const sortStringArray = (array: string[]): string[] => {
+  const arrayEnd: string[] = array.splice(0, 2);
+  array.push(arrayEnd[0]);
+  array.push(arrayEnd[1]);
 
-newRanking.push(5);
-newTeams.push("pink");
+  return array;
+};
 
-assert.deepEqual(newRanking, [1, 2, 3, 4, 5]);
-assert.deepEqual(newTeams, ["green", "yellow", "red", "blue", "pink"]);
+const newRankingArray: number[] = sortNumberArray(ranking);
+console.log("newRanking", newRankingArray);
+assert.deepEqual(newRankingArray, [1, 2, 3, 4]);
 
-newRanking.reverse();
-newTeams.reverse();
+const newTeamsArray: string[] = sortStringArray(teams);
+console.log("newTeams", newTeamsArray);
+assert.deepEqual(newTeamsArray, ["green", "yellow", "red", "blue"]);
 
-assert.deepEqual(newRanking, [5, 4, 3, 2, 1]);
-assert.deepEqual(newTeams, ["pink", "blue", "red", "yellow", "green"]);
+newRankingArray.push(5);
+console.log("newRanking", newRankingArray);
+assert.deepEqual(newRankingArray, [1, 2, 3, 4, 5]);
+
+newTeamsArray.push("pink");
+console.log("newTeams", newTeamsArray);
+assert.deepEqual(newTeamsArray, ["green", "yellow", "red", "blue", "pink"]);
+
+const reversedRanking = newRankingArray.reverse();
+console.log("reversedRanking", reversedRanking);
+assert.deepEqual(reversedRanking, [5, 4, 3, 2, 1]);
+
+const reversedTeams = newTeamsArray.reverse();
+console.log("reversedTeams", reversedTeams);
+assert.deepEqual(reversedTeams, ["pink", "blue", "red", "yellow", "green"]);

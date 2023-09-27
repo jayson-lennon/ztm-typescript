@@ -23,31 +23,33 @@ import { strict as assert } from "assert";
 const vendors = [
   { size: 10, name: "Super Software", presentationDuration: 10 },
   { size: 13, name: "Dyn-Data", presentationDuration: 8 },
-  { size: 7, name: "Engineering 2.0", presentationDuration: 12 }
+  { size: 7, name: "Engineering 2.0", presentationDuration: 12 },
 ];
 
-
 // perform step 1 here
-const smallSpaces = []; // ...
+const smallSpaces = vendors.filter((element) => element.size <= 10);
 
-assert.deepStrictEqual(smallSpaces, (() => {
-  const cloned = Array.from(vendors);
-  cloned.splice(1, 1);
-  return cloned;
-})());
+assert.deepStrictEqual(
+  smallSpaces,
+  (() => {
+    const cloned = Array.from(vendors);
+    cloned.splice(1, 1);
+    return cloned;
+  })()
+);
 
 // perform step 2 here
-const sizeExists = []; // ...
-
+const sizeExists = vendors.some((element) => element.size === 13);
 assert.equal(sizeExists, true);
 
 // perform step 3 here
-const updatedDuration = []; // ...
+const updatedDuration = vendors.map((element) => ({
+  ...element,
+  presentationDuration: element.presentationDuration + 3,
+}));
 
-assert.deepStrictEqual(updatedDuration,
-  [
-    { size: 10, name: "Super Software", presentationDuration: 13 },
-    { size: 13, name: "Dyn-Data", presentationDuration: 11 },
-    { size: 7, name: "Engineering 2.0", presentationDuration: 15 }
-  ]
-);
+assert.deepStrictEqual(updatedDuration, [
+  { size: 10, name: "Super Software", presentationDuration: 13 },
+  { size: 13, name: "Dyn-Data", presentationDuration: 11 },
+  { size: 7, name: "Engineering 2.0", presentationDuration: 15 },
+]);

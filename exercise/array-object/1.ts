@@ -27,6 +27,21 @@
 
 import { strict as assert } from "assert";
 
+function addSection(enrollments: string[], section: string): void {
+  enrollments.push(section);
+}
+
+function removeSection(enrollments: string[], section: string): void {
+  const index = enrollments.indexOf(section);
+  if (index !== -1) {
+    enrollments.splice(index, 1);
+  }
+}
+
+function totalEnrollments(enrollments: string[]): number {
+  return enrollments.length;
+}
+
 const alice = {
   name: "Alice",
   enrollments: [],
@@ -35,5 +50,14 @@ const alice = {
 const bob = {
   name: "Bob",
   enrollments: ["Algorithms"],
-}
+};
 
+addSection(alice.enrollments, "CompSci");
+addSection(alice.enrollments, "Networking");
+removeSection(alice.enrollments, "CompSci");
+assert.deepEqual(alice.enrollments, ["Networking"]);
+assert.equal(totalEnrollments(alice.enrollments), 1);
+
+addSection(bob.enrollments, "Networking");
+assert.deepEqual(bob.enrollments, ["Algorithms", "Networking"]);
+assert.equal(totalEnrollments(bob.enrollments), 2);

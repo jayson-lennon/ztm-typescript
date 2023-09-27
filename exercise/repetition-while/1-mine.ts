@@ -22,14 +22,14 @@ const users = [
 
 let i = 0;
 while (i < users.length) {
-  if (users[i].total === 0 && users[i].durations.length > 0) {
-    let sum = 0;
-    for (let s = 0; s < users[i].durations.length; s++) {
-      sum += users[i].durations[s];
-    }
-    users[i].total = sum;
-  }
-  i += 1;
+  const initialValue = 0;
+  const sumWithInitial = users[i].durations.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  users[i].total = sumWithInitial;
+  console.log(i, users[i]);
+  i++;
 }
 
 assert.deepStrictEqual(users, [

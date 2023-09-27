@@ -29,15 +29,15 @@
 const age = 25;
 
 if (age >= 18) {
-  console.log("ok to purchase");
+  console.log("Ok to purchase");
 } else {
   console.log("cannot purchase");
 }
 
-if (age >= 18 && age < 65) {
-  console.log("adult");
-} else if (age > 65) {
-  console.log("senior");
-} else {
+if (age < 18) {
   console.log("child");
+} else if (age >= 18 && age < 64) {
+  console.log("adult");
+} else if (age >= 64) {
+  console.log("senior");
 }

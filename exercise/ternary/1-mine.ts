@@ -10,17 +10,19 @@
 
 import { strict as assert } from "assert";
 
-function celsiusToFahrenheit(degreesC: number): number {
-  return degreesC * 1.8 + 32;
+const temp1 = 25;
+const temp2 = 68;
+
+function convertTemp(temperature: number, type: "C" | "F"): number {
+  let temporaryTemp: number;
+  type === "C"
+    ? (temporaryTemp = temperature * 1.8 + 32)
+    : (temporaryTemp = (temperature - 32) / 1.8);
+  return temporaryTemp;
 }
 
-function fahrenheitToCelsius(degreesF: number): number {
-  return (degreesF - 32) / 1.8;
-}
+console.log(convertTemp(temp1, "C"));
+assert.equal(convertTemp(temp1, "C"), 77);
 
-function convertTempTo(temp: number, toUnit: "C" | "F"): number {
-  return toUnit === "C" ? fahrenheitToCelsius(temp) : celsiusToFahrenheit(temp);
-}
-
-assert.equal(convertTempTo(25, "F"), 77);
-assert.equal(convertTempTo(68, "C"), 20);
+console.log(convertTemp(temp2, "F"));
+assert.equal(convertTemp(temp2, "F"), 20);

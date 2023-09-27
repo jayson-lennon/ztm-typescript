@@ -14,17 +14,22 @@ import { strict as assert } from "assert";
 
 const scores = [90, 77, 83, 96, 76, 88];
 
-function calcAverage(scores: number[]): number {
+const averaging = (array: number[]): number => {
   let sum = 0;
-  for (let i = 0; i < scores.length; i++) {
-    sum += scores[i];
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   }
-  return sum / scores.length;
-}
+  console.log("sum", sum);
 
-let average = calcAverage(scores);
+  return sum / array.length;
+};
+
+let average: number = averaging(scores);
+console.log("average", average);
 assert.equal(average, 85);
 
 scores.push(92);
-average = calcAverage(scores);
+
+average = averaging(scores);
+console.log("average", average);
 assert.equal(average, 86);

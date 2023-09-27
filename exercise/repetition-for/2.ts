@@ -9,3 +9,35 @@ import { strict as assert } from "assert";
 
 const nums = [5, 4, 3, 2, 1];
 
+function selectionSort(arr: number[]): number[] {
+  const length = arr.length;
+
+  for (let i = 0; i < length - 1; i++) {
+    let minIndex = i;
+    console.log("i", i, arr[i]);
+
+    // Find the minimum element in the unsorted part of the array
+    for (let j = i + 1; j < length; j++) {
+      console.log("j", j, arr[j]);
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+
+    // Swap the minimum element with the first element of the unsorted part
+
+    console.log("before swap", [arr[i], arr[minIndex]]);
+
+    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+
+    console.log("after swap", [arr[i], arr[minIndex]]);
+
+    console.log("arr", arr);
+  }
+
+  return arr;
+}
+
+const sorted = selectionSort(nums);
+
+assert.deepEqual(sorted, [1, 2, 3, 4, 5]);

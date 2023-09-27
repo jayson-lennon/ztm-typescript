@@ -15,7 +15,7 @@
 
 import { strict as assert } from "assert";
 
-const weightClass = parseInt("3");
+const weightClass = parseInt("8");
 
 switch (weightClass) {
   case 1:
@@ -34,4 +34,6 @@ switch (weightClass) {
   case 10:
     console.log("heavy weight class");
     break;
+  default:
+    console.log("no matching class");
 }

@@ -19,14 +19,9 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": [
-      "tsconfig.json"
-    ]
+    "project": ["tsconfig.json"]
   },
-  "ignorePatterns": [
-    "*.test.ts",
-    "*.js"
-  ],
+  "ignorePatterns": ["*.test.ts", "*.js"],
   "rules": {
     "@typescript-eslint/method-signature-style": "off",
     "@typescript-eslint/no-explicit-any": "off",

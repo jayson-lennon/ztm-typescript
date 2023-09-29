@@ -23,7 +23,18 @@ const box: Product = {
   name: "Box",
 };
 
-console.log(phone.price?.amount); // Output: 300
-const boxAmount =
-  box.price?.amount === undefined ? "not for sale" : box.price.amount;
-console.log(boxAmount); // Output: "not for sale"
+console.log(phone.price?.amount);
+
+const getPrice = (item: Product): void => {
+  if (item.price?.amount !== undefined) {
+    console.log(
+      `Product ${item.name} cost ${item.price.amount} ${item.price.currency}`
+    );
+  } else {
+    console.log("not for sale");
+  }
+};
+
+getPrice(phone);
+
+getPrice(box);

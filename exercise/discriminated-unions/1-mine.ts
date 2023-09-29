@@ -33,24 +33,45 @@ interface Circle {
 
 type Shape = Square | Rectangle | Circle;
 
-function calculateArea(shape: Shape): number {
-  switch (shape.kind) {
-    case "square":
-      return shape.sideLength * shape.sideLength;
-    case "rectangle":
-      return shape.width * shape.height;
-    case "circle":
-      return Math.PI * shape.radius * shape.radius;
-    default:
-      throw new Error("Invalid shape");
+const square: Shape = {
+  kind: "square",
+  sideLength: 5,
+};
+
+const rectangle: Shape = {
+  kind: "rectangle",
+  width: 4,
+  height: 6,
+};
+
+const circle: Shape = {
+  kind: "circle",
+  radius: 3,
+};
+
+const squareDetector = (shape: Shape): shape is Square =>
+  shape.kind === "square";
+
+const rectangleDetector = (shape: Shape): shape is Rectangle =>
+  shape.kind === "rectangle";
+
+const circleDetector = (shape: Shape): shape is Circle =>
+  shape.kind === "circle";
+
+const areaCalculator = (shape: Shape): number => {
+  if (squareDetector(shape)) {
+    return shape.sideLength ** 2;
   }
-}
+  if (rectangleDetector(shape)) {
+    return shape.height * shape.width;
+  }
+  if (circleDetector(shape)) {
+    return Math.PI * shape.radius ** 2;
+  }
 
-// Example usage
-const square: Shape = { kind: "square", sideLength: 5 };
-const rectangle: Shape = { kind: "rectangle", width: 4, height: 6 };
-const circle: Shape = { kind: "circle", radius: 3 };
+  throw new Error("wrong shape detected");
+};
 
-assert.equal(calculateArea(square), 25);
-assert.equal(calculateArea(rectangle), 24);
-assert.equal(calculateArea(circle), Math.PI * 9);
+assert.equal(areaCalculator(square), 25);
+assert.equal(areaCalculator(rectangle), 24);
+assert.equal(areaCalculator(circle), Math.PI * 9);

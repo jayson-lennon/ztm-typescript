@@ -3,7 +3,7 @@
 // not enter too much information into an input field.
 //
 // Requirements:
-// - Create a class containing a length-limited string 
+// - Create a class containing a length-limited string
 // - The class should not allow instantiation with strings greater than the
 //   specified length
 // - The class should allow setting the maximum string length
@@ -12,3 +12,23 @@
 
 import { strict as assert } from "assert";
 
+class LengthRestricted {
+  value: string;
+  constructor(input: string, maxLength: number) {
+    console.log(input.length);
+    console.log(maxLength);
+    if (input.length > maxLength) {
+      throw new Error(
+        `input string '${input}' exceeds max length of ${maxLength}`
+      );
+    } else {
+      this.value = input;
+    }
+  }
+}
+
+const ok = new LengthRestricted("ok", 5);
+
+assert.throws(() => {
+  const crash = new LengthRestricted("crash", 2);
+});

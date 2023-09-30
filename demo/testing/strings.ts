@@ -25,16 +25,22 @@ export function div(lhs: number, rhs: number): number {
 export function slowString() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      // console.log("slowString");
       resolve("sample");
     }, 200);
   });
 }
 
+// slowString();
+
 // An asynchronus function that fails.
 export function failedString() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      // console.log("failledString");
       reject("whoops");
     }, 1);
   });
 }
+
+// failedString();

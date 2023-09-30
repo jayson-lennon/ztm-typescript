@@ -23,8 +23,8 @@ const box: Product = {
   name: "Box"
 };
 
-console.log(phone.price?.amount); // Output: 999
+console.log(phone.price?.amount); // Output: 300
 const boxAmount = box.price?.amount === undefined ? "not for sale" : box.price.amount;
-console.log(boxAmount); // Output: undefined
+console.log(boxAmount); // Output: "not for sale"
 
 

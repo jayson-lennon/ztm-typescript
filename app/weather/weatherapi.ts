@@ -32,7 +32,7 @@ const weatherCodes: Record<number, string> = {
 };
 
 interface CurrentWeatherApiResponse {
-  temperature: string;
+  temperature: number;
   windspeed: number;
   winddirection: number;
   weathercode: number;
@@ -65,7 +65,7 @@ export class CurrentWeather {
 
   constructor(apiResponse: CurrentWeatherApiResponse) {
     this.temperature = {
-      value: parseInt(apiResponse.temperature),
+      value: apiResponse.temperature,
       unit: "C",
     };
     this.wind = {

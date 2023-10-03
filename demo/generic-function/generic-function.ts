@@ -76,7 +76,7 @@ assert.equal(a, "a");
 // And we can call it with an array of anything else we want:
 const objects = [{ first: 1 }, { second: 2 }];
 const first = getFirst(objects);
-assert.equal(first, { first: 1 });
+assert.deepEqual(first, { first: 1 });
 
 // Much of the time it isn't desirable for a function to with _all_ types. In
 // these cases, we can "constrain" the generic type by using interfaces.

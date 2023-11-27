@@ -8,4 +8,12 @@
 // - Print out your full name using the functions
 
 import { strict as assert } from "assert";
-
+//1st attempt
+//
+function firstNameGenerator(firstName: string) {
+  assert(typeof firstName === 'string', "Name has got to be a string man");
+  assert(firstName.length >= 1, "Nobody's name is that short man");
+  return firstName;
+}
+firstNameGenerator(Bryce);
+console.log 

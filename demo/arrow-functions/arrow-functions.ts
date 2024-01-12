@@ -9,3 +9,38 @@
 // 
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+
+function funcSum(lhs: number, rhs:number):number {
+	return lhs+rhs;
+}
+
+// function expression
+const sum = function (lhs:number, rhs:number):number {
+	return lhs+rhs;
+} 
+
+// arrow function
+const arrowSum = (lhs: number, rhs: number) => {
+	return lhs+rhs;
+}
+
+function calculate( 
+	fn: (lhs:number, rhs:number) => number, 
+	lhs: number, 
+	rhs: number) {
+	const result = fn(5,6);
+}
+calculate(arrowSum, 5, 6);
+
+// to optimize the function's signature and make it a bit simpler,
+// we can define the parameter function as type
+
+type calculationFn = (lhs: number, rhs: number) => number;
+
+function calculateN(
+	fn: calculationFn,
+	lhs: number,
+	rhs: number) {
+		const result = fn(lhs, rhs)
+	}

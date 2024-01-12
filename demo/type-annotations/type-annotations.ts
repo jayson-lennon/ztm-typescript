@@ -9,3 +9,18 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-annotations-on-variables
+
+
+const myName: string = "Reiner";
+const amount: number = 2+2;
+const hello: string = `Hello ${myName}`;
+const powerLevel: bigint = 9000n + 1n;
+const yes: boolean = true;
+
+// we can declare a return value type for functions; in this case the function MUST return something
+function sum( lhs: number, rhs: number): number {
+	return lhs + rhs;
+}
+
+sum(1, 19)
+

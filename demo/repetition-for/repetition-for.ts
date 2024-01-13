@@ -16,3 +16,8 @@
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+
+
+for (let i = 1; i <10; i++) {
+	console.log(i)
+}

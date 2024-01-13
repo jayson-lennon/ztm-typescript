@@ -9,3 +9,17 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
+
+type PersonName = string;
+
+let meinName: PersonName = 'Reiner';
+
+// The PersonName is more descriptive in other contexts compare these:
+
+function printMe( thing: string) {
+	console.log(thing)
+}
+
+function printName( name: PersonName){
+	console.log(name);
+}

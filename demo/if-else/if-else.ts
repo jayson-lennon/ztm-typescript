@@ -9,3 +9,13 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
+let age = 15
+
+if ( age > 15 ) {
+    console.log(">15");
+} else if ( age < 15 ) {
+    console.log("<15")
+} else {
+    console.log("=15")
+}

@@ -8,3 +8,12 @@
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/variable-declarations.html#let-declarations
+
+const courseName = "typescript";
+const amount = 10;
+const fraction = 10.5;
+const oneThousand = 1e3
+
+
+let someNum = 0;
+someNum = 3

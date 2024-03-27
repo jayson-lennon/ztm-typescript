@@ -9,3 +9,13 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-annotations-on-variables
+
+const amount : number = 2 + 3;
+
+function sum(lhs : number, rhs : number) : number {
+    const total = lhs + rhs;
+    return total;
+}
+
+sum(5, 5);
+

@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { AxiosStatic } from "axios";
+import 'dotenv/config'
 
 const locationInfoSchema = z.object({
   lat: z.string(),
@@ -15,6 +16,7 @@ export async function fetchLocationData(axios: AxiosStatic, apiUrl: string, loca
     url: apiUrl,
     params: {
       q: location,
+      api_key: process.env.GEOCODE_API_KEY
     },
   };
 

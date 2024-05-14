@@ -1,4 +1,5 @@
 import axios from "axios";
+import 'dotenv/config'
 
 export interface LocationInfo {
   lat: string;
@@ -15,6 +16,7 @@ export async function fetchLocationData(
     url: apiUrl,
     params: {
       q: location,
+      api_key: process.env.GEOCODE_API_KEY
     },
   };
 

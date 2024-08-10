@@ -26,6 +26,8 @@
 // Check your code by changing the age to different values and confirm that the
 // correct messages are displayed.
 
+/* eslint-disable */
+
 const age = 25;
 
 if (age >= 18) {

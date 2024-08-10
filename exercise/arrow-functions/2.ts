@@ -35,7 +35,7 @@ const calculateMedian = (arr: number[]): number => {
 const average = calculateAverage(scores);
 const median = calculateMedian(scores);
 
-console.log(`Average: ${average.toFixed(2)}`);
+console.log(`Average: ${average}`);
 console.log(`Median: ${median}`);
 
 // Test cases. Use these to check your work.

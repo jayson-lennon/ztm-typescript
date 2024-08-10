@@ -13,6 +13,12 @@
 //   - Throwing and catching an `ItemNotFoundError` when searching for a
 //     non-existent item.
 
+// Item interface
+interface Item {
+  id: number;
+  name: string;
+}
+
 // Custom error classes
 class ItemNotFoundError extends Error {
   constructor(message: string) {
@@ -21,14 +27,8 @@ class ItemNotFoundError extends Error {
   }
 }
 
-// Item interface
-interface Item {
-  id: number;
-  name: string;
-}
-
 // Function to find an item by ID
-function findItem(id: number): Item {
+function findItem(items: Item[], id: number): Item {
   const item = items.find(item => item.id === id);
   if (item == null) {
     throw new ItemNotFoundError(`Item with ID ${id} not found.`);
@@ -36,15 +36,15 @@ function findItem(id: number): Item {
   return item;
 }
 
-// List of items
+
+// Test cases
 const items: Item[] = [
   { id: 1, name: "Item1" },
   { id: 2, name: "Item2" }
 ];
 
-// Test cases
 try {
-  findItem(3);
+  findItem(items, 3);
 } catch (error) {
   if (error instanceof ItemNotFoundError) {
     console.log("Caught ItemNotFoundError: " + error.message); // Caught ItemNotFoundError: Item with ID 3 not found.

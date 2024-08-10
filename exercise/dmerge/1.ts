@@ -74,7 +74,10 @@ console.log(`Rectangle Area: ${rectangle.area()}`); // Rectangle Area: 40
 console.log(`Rectangle Perimeter: ${rectangle.perimeter()}`); // Rectangle Perimeter: 28
 
 // Test cases
+circle.radius = 5;
 assert.equal(circle.area(), Math.PI * 5 * 5);
 assert.equal(circle.perimeter(), 2 * Math.PI * 5);
+rectangle.width = 10;
+rectangle.height = 4;
 assert.equal(rectangle.area(), 10 * 4);
 assert.equal(rectangle.perimeter(), 2 * (10 + 4));

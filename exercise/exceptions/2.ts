@@ -13,7 +13,6 @@
 //   - Throwing and catching an `ItemNotFoundError` when searching for a
 //     non-existent item.
 
-
 // Custom error classes
 class ItemNotFoundError extends Error {
   constructor(message: string) {

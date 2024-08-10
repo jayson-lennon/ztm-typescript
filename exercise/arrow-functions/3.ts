@@ -5,13 +5,14 @@
 // implement this functionality.
 //
 // Requirements:
-// - Use an arrow function to filter the events based on a specific type.
-// - Use an arrow function to count the number of events that match the type.
+// - Use an arrow function to filter the events array array so it only has
+//   "click" events.
+// - Use an arrow function to count the number of filtered "click" events.
 // - Print out the filtered events and the count of matching events.
 
 import { strict as assert } from "assert";
 
-interface Event {
+type Event = {
   type: string;
   name: string;
 }

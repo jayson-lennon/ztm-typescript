@@ -47,7 +47,7 @@ try {
   findItem(items, 3);
 } catch (error) {
   if (error instanceof ItemNotFoundError) {
-    console.log("Caught ItemNotFoundError: " + error.message); // Caught ItemNotFoundError: Item with ID 3 not found.
+    console.log(`Caught ItemNotFoundError: ${error.message}`); // Caught ItemNotFoundError: Item with ID 3 not found.
   } else {
     console.error(`Unexpected error: ${(error as Error).message}`);
   }

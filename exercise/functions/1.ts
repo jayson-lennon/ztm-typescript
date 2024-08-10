@@ -7,8 +7,6 @@
 //   functions
 // - Print out your full name using the functions
 
-import { strict as assert } from "assert";
-
 
 function firstName(): string {
   return "John";

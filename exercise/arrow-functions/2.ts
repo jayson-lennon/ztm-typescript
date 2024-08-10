@@ -38,7 +38,7 @@ const median = calculateMedian(scores);
 console.log(`Average: ${average}`);
 console.log(`Median: ${median}`);
 
-// Test cases. Use these to check your work.
+// Test cases. These will confirm if your answer is correct.
 assert.equal(average, 86.375);
 assert.equal(median, 88.5);
 

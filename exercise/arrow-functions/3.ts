@@ -33,7 +33,7 @@ const clickEventCount = countEventsByType(events, "click");
 console.log("Filtered Events:", clickEvents);
 console.log("Count of Click Events:", clickEventCount);
 
-// Test cases. Use these to check your work.
+// Test cases. These will confirm if your answer is correct.
 assert.deepStrictEqual(clickEvents, [
   { type: "click", name: "Button Clicked" },
   { type: "click", name: "Link Clicked" }

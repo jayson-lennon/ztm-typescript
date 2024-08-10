@@ -20,7 +20,7 @@ const maxScore = 0;
 const minScore = 0;
 const totalSum = 0;
 
-// Test cases. Use these to check your work.
+// Test cases. These will confirm if your answer is correct.
 assert.equal(maxScore, 56);
 assert.equal(minScore, 8);
 assert.equal(totalSum, 195);

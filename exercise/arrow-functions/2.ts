@@ -17,7 +17,7 @@ const scores: number[] = [85, 92, 88, 74, 91, 77, 89, 95];
 const average = 0;
 const median = 0;
 
-// Test cases. Use these to check your work.
+// Test cases. These will confirm if your answer is correct.
 assert.equal(average, 86.375);
 assert.equal(median, 88.5);
 

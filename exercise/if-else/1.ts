@@ -26,5 +26,8 @@
 // Check your code by changing the age to different values and confirm that the
 // correct messages are displayed.
 
+/* eslint-disable */
+
+// Change this to different values to check your program behavior.
 const age = 25;
 

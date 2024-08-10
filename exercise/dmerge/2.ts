@@ -16,10 +16,9 @@
 //   additional properties:
 //   -  payloadCapacity: A number representing the payload capacity in kilograms.
 //   -  numberOfAxles: A number representing the number of axles on the truck.
-// - Create instances of Car and Truck, set all properties, and print their
-//   details including the new properties.
-
-import { strict as assert } from "assert";
+// - Create instances of Car and Truck, set all properties to any values you'd
+//   like, and print their details including the new properties.
+//   - Only print the new properties if they are not null.
 
 // Initial Vehicle interface
 interface Vehicle {
@@ -80,16 +79,3 @@ if (truck.payloadCapacity != null) {
 if (truck.numberOfAxles != null) {
   console.log(`Number of Axles: ${truck.numberOfAxles} `); // Number of Axles: 2
 }
-
-// Test cases
-assert.equal(car.make, "Honda");
-assert.equal(car.model, "Civic");
-assert.equal(car.year, 2022);
-assert.equal(car.numberOfDoors, 4);
-assert.equal(car.hasSunroof, true);
-
-assert.equal(truck.make, "Ford");
-assert.equal(truck.model, "F-150");
-assert.equal(truck.year, 2023);
-assert.equal(truck.payloadCapacity, 3000);
-assert.equal(truck.numberOfAxles, 2);

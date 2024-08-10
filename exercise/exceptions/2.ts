@@ -13,6 +13,8 @@
 //   - Throwing and catching an `ItemNotFoundError` when searching for a
 //     non-existent item.
 
+import { strict as assert } from "assert";
+
 // Item interface
 interface Item {
   id: number;
@@ -52,3 +54,6 @@ try {
     console.error(`Unexpected error: ${(error as Error).message}`);
   }
 }
+
+const item1 = findItem(items, 1);
+assert.deepEqual(item1, { id: 1, name: "Item1" });

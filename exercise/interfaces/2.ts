@@ -42,7 +42,7 @@ class DebitCardPayment implements PaymentMethod {
   providerName = "Debit Card";
   flatFee = 0.30;
 
-  calculateFee(amount: number): Fee {
+  calculateFee(_: number): Fee {
     return this.flatFee;
   }
 }

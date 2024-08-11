@@ -145,9 +145,6 @@ import { strict as assert } from "assert";
   theater.addShowtime("The Matrix", "21:00");
   theater.addShowtime("Inception", "20:00");
 
-  // Runtime error: must use an instance of `Showtime`
-  // theater.addShowtime("The Matrix", { "time": "18:00" });
-
   theater.listShowtimes("The Matrix"); // Outputs: Showtimes for "The Matrix": 18:00, 21:00
 
   theater.removeShowtime("The Matrix", "18:00");

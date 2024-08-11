@@ -11,19 +11,21 @@
 
 import { strict as assert } from "assert";
 
+interface Review {
+  reviewer?: {
+    name?: string;
+    age?: number;
+  };
+  rating?: number;
+  details?: {
+    comment?: string;
+    date?: string;
+  };
+}
+
 interface BookReview {
   title: string;
-  reviews?: Array<{
-    reviewer?: {
-      name?: string;
-      age?: number;
-    };
-    rating?: number;
-    details?: {
-      comment?: string;
-      date?: string;
-    };
-  }>;
+  reviews?: Review[];
 }
 
 const bookReview: BookReview = {

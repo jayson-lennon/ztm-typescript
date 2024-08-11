@@ -4,12 +4,6 @@
 // object and print out the details.
 //
 // Requirements:
-//
-// - Create an object representing an item in the inventory with the following
-//   properties:
-//   - `name`: a string representing the item's name.
-//   - `quantity`: a number representing the quantity of the item in stock.
-//   - `location`: a string representing the item's location in the warehouse.
 // - Use a for..in loop to iterate over the properties of the item object.
 // - Inside the loop, print out each property and its corresponding value in
 //   the format: "{property}: {value}".

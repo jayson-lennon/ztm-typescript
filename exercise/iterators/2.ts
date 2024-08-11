@@ -4,12 +4,6 @@
 // tasks and print out the tasks that are incomplete.
 //
 // Requirements:
-//
-// - Create an array of tasks, where each task is an object with the following
-//   properties:
-//   - `title`: a string representing the task's title.
-//   - `completed`: a boolean indicating whether the task is complete (true) or
-//     incomplete (false).
 // - Use a for..of loop to iterate over the array of tasks.
 // - Inside the loop, print out the title of each task that is incomplete, in
 //   the format: "Incomplete Task: {title}".

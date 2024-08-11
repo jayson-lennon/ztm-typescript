@@ -43,6 +43,8 @@
     "import/no-namespace": "warn",
     "import/no-webpack-loader-syntax": "error",
     "no-lone-blocks": "off",
+    "@typescript-eslint/prefer-readonly": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {

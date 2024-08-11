@@ -14,7 +14,6 @@
 //     and `false` otherwise.
 //   - `getCar`: searches for a car by license plate number and returns a `Car | undefined`
 //   - `printAllCars: print out all cars and their details
-// - Check your code by changing the availability of a car
 
 import { strict as assert } from "assert";
 

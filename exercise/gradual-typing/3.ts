@@ -65,7 +65,7 @@
 //
 //   theater.addShowtime("Inception", "20:00");
 //
-//   // It's possible to add showtimes that aren't actual times
+//   // It's possible to add showtimes that aren't actual times, but this is not desired.
 //   theater.addShowtime("whoops", "whenever");
 //   theater.listShowtimes("whoops"); // Outputs: Showtimes for "whoops": whenever
 //

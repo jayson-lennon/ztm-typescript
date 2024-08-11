@@ -6,12 +6,17 @@
 // - Create a `CarRental` class that uses a `Map` to store cars.
 // - Each car should be represented by an object containing the car model
 //   (string) and its availability status (boolean).
-// - Implement functionality to:
-//   - Add a new car to the rental fleet.
-//   - Update the availability status of a car when it's rented or returned.
-//   - Retrieve and print the details of a car by its license plate number.
-//   - Print out all cars and their details.
+// - Implement the following functions for the class:
+//   - `addCar`: adds a new car to the rental fleet
+//     - adding a car requires a license plate (string), model, and availability status
+//   - `updateAvailability`: changes the status of a car (whether it's rented
+//     or returned). This method must return `true` if the status was changed,
+//     and `false` otherwise.
+//   - `getCar`: searches for a car by license plate number and returns a `Car | undefined`
+//   - `printAllCars: print out all cars and their details
 // - Check your code by changing the availability of a car
+
+import { strict as assert } from "assert";
 
 interface Car {
   model: string;
@@ -37,7 +42,7 @@ class CarRental {
     }
   }
 
-  getCarDetails(licensePlate: string): Car | undefined {
+  getCar(licensePlate: string): Car | undefined {
     return this.fleet.get(licensePlate);
   }
 
@@ -57,8 +62,12 @@ rental.printAllCars();
 rental.updateAvailability("XYZ789", true);
 rental.printAllCars();
 
-// Expected Output:
-// ABC123 - Model: Toyota Camry, Available: true
-// XYZ789 - Model: Honda Accord, Available: false
-// ABC123 - Model: Toyota Camry, Available: true
-// XYZ789 - Model: Honda Accord, Available: true
+// Test cases:
+const testRental = new CarRental();
+testRental.addCar("test1", "car1", true);
+testRental.addCar("test2", "car2", true);
+testRental.updateAvailability("test1", false);
+assert.equal(testRental.updateAvailability("unknown plate", false), false);
+assert.equal(testRental.getCar("test1")?.isAvailable, false);
+assert.equal(testRental.getCar("test2")?.isAvailable, true);
+

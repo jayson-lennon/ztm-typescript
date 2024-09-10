@@ -7,7 +7,6 @@ function addItemToCart(cart, item, quantity) {
   cart[item] += quantity;
 }
 
-// JavaScript function to calculate total price
 function calculateTotal(cart, prices) {
   let total = 0;
   for (const item in cart) {
@@ -16,7 +15,6 @@ function calculateTotal(cart, prices) {
   return total;
 }
 
-// JavaScript function to apply discount
 function applyDiscount(total, discount) {
   return total * (1 - discount);
 }

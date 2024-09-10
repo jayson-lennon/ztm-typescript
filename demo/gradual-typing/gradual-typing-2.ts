@@ -1,5 +1,4 @@
 // JavaScript
-console.log("JavaScript");
 
 function addItemToCart(cart, item, quantity) {
   if (!cart[item]) {

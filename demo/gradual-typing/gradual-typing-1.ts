@@ -1,12 +1,17 @@
 // JavaScript
 
-function greetUsers(users) {
+interface User {
+  name: string;
+  age: number;
+}
+
+function greetUsers(users: User[]): void {
   users.forEach(user => {
     console.log(`Hello, ${user.name}!`);
   });
 }
 
-function getAverageAge(users) {
+function getAverageAge(users: User[]): number {
   let totalAge = 0;
   users.forEach(user => {
     totalAge += user.age;

@@ -33,3 +33,4 @@ module.exports = {
     quote,
     setCase
 }
+

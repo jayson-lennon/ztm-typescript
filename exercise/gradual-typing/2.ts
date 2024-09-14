@@ -32,3 +32,4 @@ console.log(calculate("add", 2, "10"));      // Outputs: "210" (unexpected behav
 assert.equal(calculate("add", 10, 5), 15)
 assert.equal(calculate("divide", 10, 2), 5)
 assert.equal(calculate("subtract", 10, 2), 8)
+

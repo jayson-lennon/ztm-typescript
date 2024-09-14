@@ -48,3 +48,4 @@ const isAdmin3 = true;
 const hasAccess3 = null;
 assert.equal(hasAccess3, true);  // Should be true since the user is an admin
 
+

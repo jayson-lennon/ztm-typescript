@@ -53,3 +53,4 @@ import { strict as assert } from "assert";
 const ranking = [3, 4, 1, 2];
 const teams = ["red", "blue", "green", "yellow"];
 
+

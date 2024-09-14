@@ -24,3 +24,4 @@ const totalSum = 0;
 assert.equal(maxScore, 56);
 assert.equal(minScore, 8);
 assert.equal(totalSum, 195);
+

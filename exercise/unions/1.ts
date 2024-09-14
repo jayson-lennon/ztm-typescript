@@ -17,3 +17,4 @@ logTaskStatus("Completed"); // Output: Task status message: Completed
 logTaskStatus(200);         // Output: Task status code: 200
 logTaskStatus("In Progress"); // Output: Task status message: In Progress
 logTaskStatus(404);         // Output: Task status code: 404
+

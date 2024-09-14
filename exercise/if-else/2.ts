@@ -36,3 +36,4 @@ const itemPrice = 40;
 //
 // Put your code here to check if the user has enough money to make a purchase
 //
+//

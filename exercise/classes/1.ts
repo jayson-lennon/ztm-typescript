@@ -34,3 +34,4 @@ assert.equal(myBook.isCheckedOut, true);
 // Put your method calls to "return" a book here.
 //
 assert.equal(myBook.isCheckedOut, false);
+

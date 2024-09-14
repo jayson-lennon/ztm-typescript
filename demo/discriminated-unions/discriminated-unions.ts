@@ -10,3 +10,4 @@
 // a 'discriminated union'. Unions only allow the type to be one
 // option at a time. Combining this with objects allows multiple
 // pieces of data to be associated with each individual option.
+//

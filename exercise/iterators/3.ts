@@ -20,3 +20,4 @@ const item = {
 // quantity: 25
 // location: Aisle 3, Shelf 2
 
+

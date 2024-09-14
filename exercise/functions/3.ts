@@ -25,3 +25,4 @@ import { strict as assert } from "assert";
 assert.equal(calculateAverage(10, 20, 30), 20);
 assert.equal(isAboveThreshold(20, 15), true);
 
+

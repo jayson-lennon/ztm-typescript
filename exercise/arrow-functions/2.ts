@@ -21,3 +21,4 @@ const median = 0;
 assert.equal(average, 86.375);
 assert.equal(median, 88.5);
 
+

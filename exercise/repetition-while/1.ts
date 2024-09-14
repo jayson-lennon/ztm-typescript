@@ -28,3 +28,4 @@ assert.deepStrictEqual(users, [
   { id: 5, durations: [22, 12, 24], total: 58 },
   { id: 6, durations: [19, 11, 33], total: 63 },
 ]);
+

@@ -51,3 +51,4 @@ assert.deepStrictEqual(updatedDuration,
     { size: 7, name: "Engineering 2.0", presentationDuration: 15 }
   ]
 );
+

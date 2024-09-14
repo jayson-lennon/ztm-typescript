@@ -23,3 +23,4 @@ import { strict as assert } from "assert";
 assert.equal(isEligibleForDiscount(60, 90), false);
 assert.equal(isEligibleForDiscount(70, 90), true);
 assert.equal(isEligibleForDiscount(60, 100), true);
+

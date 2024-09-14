@@ -49,3 +49,4 @@
 // - Assert that you _do not_ get "gold" and 900 again
 
 import { strict as assert } from "assert";
+

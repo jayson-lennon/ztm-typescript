@@ -39,3 +39,4 @@ and then run with
 ## Generate docs
 
 cd demo/ANY_DIR && npx typedoc DEMO_FILE.ts
+

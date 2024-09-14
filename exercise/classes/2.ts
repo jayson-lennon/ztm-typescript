@@ -114,3 +114,4 @@ assert.strictEqual(treasure, "gold");
 assert.strictEqual(amount, 900);
 assert.deepStrictEqual(goldChest.open(), ["empty", 0]);
 
+

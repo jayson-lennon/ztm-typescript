@@ -2,10 +2,10 @@ import fs from "fs";
 
 const todosPath = "todos.json";
 
-type Todo = {
+interface Todo {
   id: number;
   task: string;
-};
+}
 
 function getTodos(): Todo[] {
   if (!fs.existsSync(todosPath)) {
@@ -17,6 +17,7 @@ function getTodos(): Todo[] {
 
 function listTodos(): void {
   const todos: Todo[] = getTodos();
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < todos.length; i++) {
     console.log(`${todos[i].id}: ${todos[i].task}`);
   }

@@ -53,3 +53,5 @@ fetchUserDataAsync(1)
   .then((userData) => console.log(userData.name))
   // When a `Promise` fails, we use `catch` to handle the error:
   .catch((error) => console.error(error));
+
+

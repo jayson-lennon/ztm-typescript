@@ -43,3 +43,5 @@ if (age >= 18 && age < 65) {
 } else {
   console.log("child");
 }
+
+

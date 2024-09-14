@@ -70,3 +70,4 @@ assert.equal(bookCollection.getItems().length, 2);
 
 const filteredBooks = bookCollection.filterItems(book => book.year >= 2023);
 assert.equal(filteredBooks.length, 1);
+

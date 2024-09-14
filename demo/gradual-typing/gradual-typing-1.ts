@@ -25,3 +25,4 @@ const users = [
 
 greetUsers(users);
 console.log(`Average age: ${getAverageAge(users)}`);
+

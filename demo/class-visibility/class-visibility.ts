@@ -52,11 +52,9 @@ class Employee extends Person {
   }
 
   public getEmployeeInfo(): string {
-    return `Name: ${
-      this.name
-    }, Email: ${this.getEmail()}, Age: not accessible, Department: ${
-      this.department
-    }`;
+    return `Name: ${this.name
+      }, Email: ${this.getEmail()}, Age: not accessible, Department: ${this.department
+      }`;
   }
 
   // Make the email publicly accessible by forwarding the function call:
@@ -82,3 +80,4 @@ assert.equal(
   "Name: Mary, Email: mary@example.com, Age: not accessible, Department: Sales"
 );
 // assert.equal(mary.getAge(), 25); // Error: Property 'age' is private and only accessible within class 'Person'.
+//

@@ -59,3 +59,4 @@ switch (someNumber) {
     // (code)
     break;
 }
+

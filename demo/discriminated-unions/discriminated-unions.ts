@@ -51,3 +51,4 @@ function showMessage(msg: AccountCreationMessage) {
 }
 
 showMessage(ok);
+

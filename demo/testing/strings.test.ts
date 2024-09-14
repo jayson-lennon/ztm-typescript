@@ -47,3 +47,4 @@ test("failed string fails with a 'whoops'", async () => {
     })
     .catch((err) => expect(err).toEqual("whoops"));
 });
+

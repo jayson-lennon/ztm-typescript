@@ -23,3 +23,4 @@ for (const property in item) {
 // quantity: 25
 // location: Aisle 3, Shelf 2
 
+

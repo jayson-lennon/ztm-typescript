@@ -88,3 +88,4 @@ const vip = new VIPTicket();
 assert.equal(vip.hasPriorityAccess("weekday"), true);
 assert.equal(vip.hasPriorityAccess("weekend"), true);
 assert.equal(vip.hasPriorityAccess("holiday"), true);
+

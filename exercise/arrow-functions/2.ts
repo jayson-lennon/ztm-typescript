@@ -15,6 +15,7 @@ const scores: number[] = [85, 92, 88, 74, 91, 77, 89, 95];
 
 const calculateAverage = (arr: number[]): number => {
   let sum = 0;
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
@@ -41,4 +42,5 @@ console.log(`Median: ${median}`);
 // Test cases. These will confirm if your answer is correct.
 assert.equal(average, 86.375);
 assert.equal(median, 88.5);
+
 

@@ -81,3 +81,4 @@ rectangle.width = 10;
 rectangle.height = 4;
 assert.equal(rectangle.area(), 10 * 4);
 assert.equal(rectangle.perimeter(), 2 * (10 + 4));
+

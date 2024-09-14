@@ -3,7 +3,6 @@
 //
 // Note: The getUser function fails randomly. Make sure your function is able
 // to handle a failure scenario by printing out what went wrong.
-import { strict as assert } from "assert";
 
 interface User {
   id: number;
@@ -35,4 +34,5 @@ async function fetchUserData(): Promise<User | undefined> {
 }
 
 fetchUserData();
+
 

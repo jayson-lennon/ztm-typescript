@@ -58,3 +58,4 @@ assert.equal(myBook.isCheckedOut, true);
 myBook.returnBook();
 myBook.displayInfo();
 assert.equal(myBook.isCheckedOut, false);
+

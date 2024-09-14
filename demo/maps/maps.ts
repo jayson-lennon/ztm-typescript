@@ -55,3 +55,5 @@ for (const score of testScores.values()) {
 // If you want to delete all the keys from a map:
 testScores.clear();
 assert.equal(testScores.size, 0);
+
+

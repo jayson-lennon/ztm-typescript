@@ -50,3 +50,4 @@ passwordField.addEventListener("input", (_) => {
 
 // set initial state
 agreeTosCheckBox.checked = false;
+

@@ -45,3 +45,5 @@ type Rgb = "red" | "green" | "blue";
 
   const exec: Department = Department.Executive;
 }
+
+

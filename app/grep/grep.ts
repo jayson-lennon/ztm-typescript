@@ -8,6 +8,7 @@ const contents = readFileSync(filename, "utf8");
 
 const lines = contents.split("\n");
 
+// eslint-disable-next-line @typescript-eslint/prefer-for-of
 for (let i = 0; i < lines.length; i++) {
   if (lines[i].includes(searchString)) {
     console.log(lines[i]);

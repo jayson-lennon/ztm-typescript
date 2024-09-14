@@ -33,3 +33,4 @@ export async function fetchLocationData(axios: AxiosStatic, apiUrl: string, loca
     throw new Error("Failed to fetch location data");
   }
 }
+

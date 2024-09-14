@@ -58,3 +58,4 @@ console.log(debitCardPayment.calculateFee(100));
 // Test cases
 assert.equal(new CreditCardPayment().calculateFee(100), 0.5);
 assert.equal(new DebitCardPayment().calculateFee(100), 0.30);
+

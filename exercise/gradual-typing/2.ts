@@ -12,8 +12,10 @@ import { strict as assert } from "assert";
 {
   console.log("JavaScript");
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   function calculate(operation, a, b) {
     if (operation === "add") {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/restrict-plus-operands
       return a + b;
     } else if (operation === "subtract") {
       return a - b;

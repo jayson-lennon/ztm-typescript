@@ -45,3 +45,4 @@ const isAdmin3 = true;
 const hasAccess3 = (isLoggedIn3 && hasAcceptedTerms3) || isAdmin3;
 assert.equal(hasAccess3, true);  // Should be true since the user is an admin
 
+

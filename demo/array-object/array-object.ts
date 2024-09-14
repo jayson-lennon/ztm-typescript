@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { strict as assert } from "assert";
 
 // Arrays can contain anything, including objects.
 type Link = {
@@ -20,3 +19,4 @@ const typescript = {
 const sites = [microsoft, typescript];
 const tsUrl = sites[1].url;
 sites[0].title = "Microsoft";
+

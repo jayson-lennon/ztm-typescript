@@ -37,6 +37,7 @@ const findMinScore = (arr: number[]): number => {
 
 const calculateTotalSum = (arr: number[]): number => {
   let sum = 0;
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
@@ -55,3 +56,4 @@ console.log(`Total Sum: ${totalSum}`);
 assert.equal(maxScore, 56);
 assert.equal(minScore, 8);
 assert.equal(totalSum, 195);
+

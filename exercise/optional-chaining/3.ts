@@ -60,3 +60,4 @@ assert.deepStrictEqual(commentsT999, []);
 const emptyAccount: CustomerAccount = { name: "Bob Smith" };
 const commentsEmpty = getTicketComments(emptyAccount, "T123");
 assert.deepStrictEqual(commentsEmpty, []);
+

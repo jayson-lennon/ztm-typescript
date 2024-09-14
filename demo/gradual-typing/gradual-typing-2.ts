@@ -36,3 +36,4 @@ addItemToCart(cart, 'banana', 3);
 const total = calculateTotal(cart, prices);
 const discountedTotal = applyDiscount(total, 0.1);
 console.log(`Total after discount: $${discountedTotal}`);
+

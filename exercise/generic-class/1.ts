@@ -44,3 +44,4 @@ assert.equal(item, "Hello");
 
 const allItems = stringQueue.getAll();
 assert.deepStrictEqual(allItems, ["World"]);
+

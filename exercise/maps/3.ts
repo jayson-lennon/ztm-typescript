@@ -70,3 +70,4 @@ assert.equal(testRental.updateAvailability("unknown plate", false), false);
 assert.equal(testRental.getCar("test1")?.isAvailable, false);
 assert.equal(testRental.getCar("test2")?.isAvailable, true);
 
+

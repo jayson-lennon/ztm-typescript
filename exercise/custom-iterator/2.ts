@@ -23,6 +23,7 @@ import { strict as assert } from "assert";
 
 function* idGenerator(prefix: string): Generator<string, void> {
   let id = 1;
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   while (true) {
     yield `${prefix}${id}`;
     id++;
@@ -45,4 +46,5 @@ console.log(id3); // item-3
 assert.equal(id1, "item-1");
 assert.equal(id2, "item-2");
 assert.equal(id3, "item-3");
+
 

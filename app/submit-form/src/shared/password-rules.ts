@@ -5,3 +5,4 @@ export function checkComplexity(plainPassword: string): string[] {
 
   return errors;
 }
+

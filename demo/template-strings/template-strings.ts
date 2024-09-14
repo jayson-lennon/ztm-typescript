@@ -23,3 +23,5 @@ const totalPeople = `There are ${kids + adults} people`;
 // Template literals can include other strings created
 // with template literals:
 console.log(`${totalPeople} to seat at the restaurant.`);
+
+

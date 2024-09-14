@@ -13,8 +13,6 @@
 // Modify the existing `weightClass` variable to confirm that your code works
 // as expected.
 
-import { strict as assert } from "assert";
-
 const weightClass = parseInt("3");
 
 switch (weightClass) {
@@ -35,3 +33,5 @@ switch (weightClass) {
     console.log("heavy weight class");
     break;
 }
+
+

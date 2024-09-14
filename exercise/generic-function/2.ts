@@ -22,3 +22,4 @@ const numbers: number[] = [1, 2, 3, 4, 5];
 const average = calculateAverage(numbers);
 
 assert.equal(average, 3);
+

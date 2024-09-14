@@ -52,3 +52,4 @@ console.log(`Is average above ${threshold}? ${result}`); // Is average above 15?
 assert.equal(calculateAverage(10, 20, 30), 20);
 assert.equal(isAboveThreshold(20, 15), true);
 
+

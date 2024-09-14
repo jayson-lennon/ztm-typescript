@@ -72,3 +72,4 @@ const unknownPayload: unknown = {
 
 // ERROR: cannot assign to string
 // const msg: string = unknownPayload;
+//

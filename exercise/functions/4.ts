@@ -42,3 +42,4 @@ console.log(`Is user eligible for discount? ${eligibility}`); // Is user eligibl
 assert.equal(isEligibleForDiscount(60, 90), false);
 assert.equal(isEligibleForDiscount(70, 90), true);
 assert.equal(isEligibleForDiscount(60, 100), true);
+

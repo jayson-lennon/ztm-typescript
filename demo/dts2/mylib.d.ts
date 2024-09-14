@@ -19,3 +19,4 @@ export interface ApiResponse {
 }
 
 export function apiResponse(): ApiResponse | undefined;
+

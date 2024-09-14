@@ -6,3 +6,4 @@ export function checkUsername(username: string): string[] {
 
   return errors;
 }
+

@@ -40,3 +40,4 @@ handleMenuSelection(2);  // Output: Option 2 selected.
 handleMenuSelection(3);  // Output: Option 3 selected.
 handleMenuSelection(4);  // Output: Option 4 selected.
 handleMenuSelection(5);  // Output: Invalid option selected.
+

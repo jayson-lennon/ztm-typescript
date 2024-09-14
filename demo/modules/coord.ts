@@ -8,3 +8,4 @@ export interface Point {
 // Default exported item. Prefer to NOT use this because it can break code
 // completion.
 export default Point;
+

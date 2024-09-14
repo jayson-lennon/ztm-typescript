@@ -16,6 +16,7 @@ const scores = [90, 77, 83, 96, 76, 88];
 
 function calcAverage(scores: number[]): number {
   let sum = 0;
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < scores.length; i++) {
     sum += scores[i];
   }
@@ -28,3 +29,4 @@ assert.equal(average, 85);
 scores.push(92);
 average = calcAverage(scores);
 assert.equal(average, 86);
+

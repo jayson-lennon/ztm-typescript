@@ -35,3 +35,4 @@ const range = new Range(1, 5);
 for (const num of range) {
   console.log(num);
 }
+

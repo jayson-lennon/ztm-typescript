@@ -80,3 +80,4 @@ assert.deepEqual(letters, ["a", "b", "c", , "d"]);
 
 // For more info about arrays:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+//

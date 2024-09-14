@@ -40,3 +40,4 @@ function sum(lhs: number, rhs: number): number {
 // Type annotation optional: we already know `sum` returns a number.
 const four = sum(2, 2);
 assert.equal(four, 4);
+

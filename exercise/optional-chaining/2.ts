@@ -70,3 +70,4 @@ assert.equal(secondReviewComment, undefined);
 // Access the date of the first review
 const firstReviewDate = bookReview.reviews?.[0].details?.date;
 assert.equal(firstReviewDate, "2024-08-10");
+

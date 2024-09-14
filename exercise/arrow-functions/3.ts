@@ -12,6 +12,7 @@
 
 import { strict as assert } from "assert";
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 type Event = {
   type: string;
   name: string;
@@ -40,3 +41,4 @@ assert.deepStrictEqual(clickEvents, [
 ]);
 
 assert.equal(clickEventCount, 2);
+

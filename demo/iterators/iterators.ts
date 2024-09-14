@@ -38,3 +38,4 @@ for (k in nums) {
   // Print the property name and associated value:
   console.log(`[${k}]: ${nums[k]}`);
 }
+

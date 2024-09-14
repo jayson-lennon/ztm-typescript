@@ -34,3 +34,4 @@ export async function fetchLocationData(
     throw new Error("Failed to fetch location data");
   }
 }
+

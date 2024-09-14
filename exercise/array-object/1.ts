@@ -61,3 +61,4 @@ assert.equal(totalEnrollments(alice.enrollments), 1);
 addSection(bob.enrollments, "Networking");
 assert.deepEqual(bob.enrollments, ["Algorithms", "Networking"]);
 assert.equal(totalEnrollments(bob.enrollments), 2);
+

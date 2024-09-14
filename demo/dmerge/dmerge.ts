@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { strict as assert } from "assert";
 
 // Declaration merging is a way to combine multiple declarations of
 // the same entity into a single definition. This allows you to extend existing
@@ -34,3 +33,4 @@ const user: User = {
 
 // Call the function to get the user's name and age
 console.log(getUserInfo(user)); // Output: John Doe is 30 years old.
+

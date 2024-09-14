@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // Your task is to create a class that only allows text input up to a certain
 // length. This length-restricted class will be used to ensure that users do
 // not enter too much information into an input field.
@@ -9,6 +11,7 @@
 // - The class should allow setting the maximum string length
 // - Throw an exception in the constructor of the class if the string is over
 //   the maximum length
+
 
 import { strict as assert } from "assert";
 
@@ -28,4 +31,5 @@ const ok = new LengthRestricted("ok", 5);
 assert.throws(() => {
   const crash = new LengthRestricted("crash", 2);
 });
+
 

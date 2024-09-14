@@ -13,3 +13,4 @@ const pluginCallback: FastifyPluginCallback = (fastify, _options, next) => {
 }
 
 export const clearFlashCookie = fp(pluginCallback);
+

@@ -125,3 +125,4 @@ export async function fetchWeatherData(
     throw new Error("Failed to fetch weather data");
   }
 }
+

@@ -84,3 +84,4 @@
   const userInput = document.getElementById("user-input") as HTMLInputElement;
   userInput.value = "Text input from TypeScript!";
 }
+

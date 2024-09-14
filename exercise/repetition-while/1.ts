@@ -24,6 +24,7 @@ let i = 0;
 while (i < users.length) {
   if (users[i].total === 0 && users[i].durations.length > 0) {
     let sum = 0;
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let s = 0; s < users[i].durations.length; s++) {
       sum += users[i].durations[s];
     }
@@ -40,3 +41,4 @@ assert.deepStrictEqual(users, [
   { id: 5, durations: [22, 12, 24], total: 58 },
   { id: 6, durations: [19, 11, 33], total: 63 },
 ]);
+

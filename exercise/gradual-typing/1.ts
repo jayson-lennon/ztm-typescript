@@ -11,7 +11,9 @@ import { strict as assert } from "assert";
 // JavaScript
 {
   console.log("JavaScript");
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   function add(a, b) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/restrict-plus-operands
     return a + b;
   }
 

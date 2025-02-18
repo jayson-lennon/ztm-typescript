@@ -11,8 +11,5 @@
       "@types/jest"
     ],
     "module": "commonjs",
-    "typeRoots": [
-      "./src/backend/types"
-    ]
   }
 }

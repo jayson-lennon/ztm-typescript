@@ -1,7 +1,6 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 import { fetchLocationData } from "./location";
-import { strict as assert } from "assert";
 
 it("should convert API request", async () => {
   // makes `axios` to use the mock instead of making an actual request
@@ -9,7 +8,7 @@ it("should convert API request", async () => {
 
   const GEOCODE_API_URL = "https://geocode.maps.co/search";
 
-  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test" } }).reply(200,
+  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test", api_key: undefined } }).reply(200,
     [
       {
         place_id: 287781008,
@@ -51,7 +50,7 @@ it("throws error when response is not 200", async () => {
 
   const GEOCODE_API_URL = "https://geocode.maps.co/search";
 
-  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test" } }).reply(400, {});
+  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test", api_key: undefined } }).reply(400, {});
 
   // this will throw an error if it fails, which will mark the test as a failure
   await expect(fetchLocationData(axios, GEOCODE_API_URL, "test")).rejects.toThrow();
@@ -63,8 +62,9 @@ it("throws error when the API response changes", async () => {
 
   const GEOCODE_API_URL = "https://geocode.maps.co/search";
 
-  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test" } }).reply(200, {});
+  httpClient.onGet(GEOCODE_API_URL, { params: { q: "test", api_key: undefined } }).reply(200, {});
 
+  jest.spyOn(console, 'error').mockImplementation(jest.fn());
   // this will throw an error if it fails, which will mark the test as a failure
   await expect(fetchLocationData(axios, GEOCODE_API_URL, "test")).rejects.toThrow();
 });

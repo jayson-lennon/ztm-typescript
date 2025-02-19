@@ -95,8 +95,11 @@ it("throws error when the API response changes", async () => {
 
   httpClient.onGet(WEATHER_API_URL, {
     params: {
-      latitude: "0.0",
-      longitude: "0.0",
+      // fields renamed to `lat` and `long`
+      lat: "0.0",
+      long: "0.0",
+      // latitude: "0.0",
+      // longitude: "0.0",
       hourly: "temperature_2m",
       temperature_unit: "celsius",
       current_weather: true,

@@ -3,16 +3,9 @@
   "ts-node": {
     "files": true
   },
-  "exclude": [
-    "coverage"
-  ],
+  "exclude": ["coverage"],
   "compilerOptions": {
-    "types": [
-      "@types/jest"
-    ],
-    "module": "commonjs",
-    "typeRoots": [
-      "./src/backend/types"
-    ]
+    "types": ["@types/jest"],
+    "module": "commonjs"
   }
 }

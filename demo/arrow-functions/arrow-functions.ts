@@ -24,31 +24,3 @@ console.log(four);
 const nine = arrowSquare(3);
 console.log(nine);
 
-// Arrow functions make it possible to access `this` in an object:
-const person = {
-  name: "Alice",
-
-  // Method containing a nested function (does not work as expected). Run with
-  // `node` instead of `pnpm exec ts-node`. TypeScript will produce an error
-  // here.
-  logName() {
-    const sayHello = function () {
-      console.log("My name is", this.name); // "My name is undefined"
-    };
-
-    sayHello();
-  },
-
-  // Method containing a nested arrow function (works correctly)
-  logNameArrow() {
-    const sayHello = () => {
-      // `this` refers to `person`
-      console.log("My name is", this.name); // "My name is Alice"
-    };
-
-    sayHello();
-  },
-};
-
-person.logName();
-person.logNameArrow();

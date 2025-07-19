@@ -1,46 +1,25 @@
-// You are developing a small statistics module that needs to calculate the
-// average and median of an array of numbers. The array represents the scores
-// of students in an exam. You will use arrow functions to find the average and
-// median of these scores.
-//
-// Requirements:
-// - Use an arrow function to calculate the average of the numbers in the array.
-// - Use an arrow function to calculate the median of the numbers in the array.
-// - The array may have an even or odd number of elements, so handle both cases for the median.
-// - Print out the average and the median of the scores.
-
+/* eslint-disable */
 import { strict as assert } from "assert";
 
-const scores: number[] = [85, 92, 88, 74, 91, 77, 89, 95];
+// You are asked to write a function that returns a greeting based on whether
+// the time of day is "morning", "afternoon", or any other value. The function
+// should be written as an arrow function and use either if-else or ternary
+// operators.
 
-const calculateAverage = (arr: number[]): number => {
-  let sum = 0;
-  // eslint-disable-next-line @typescript-eslint/prefer-for-of
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
-};
+// Rewrite this function using arrow function syntax.
+function greet(timeOfDay) {
+  if (timeOfDay === "morning") return "Good morning!";
+  else if (timeOfDay === "afternoon") return "Good afternoon!";
+  else return "Hello there!";
+}
 
-const calculateMedian = (arr: number[]): number => {
-  const sortedArr = [...arr].sort((a, b) => a - b);
-  const mid = Math.floor(sortedArr.length / 2);
+const solution = (timeOfDay) => {
+  if (timeOfDay === "morning") return "Good morning!";
+  else if (timeOfDay === "afternoon") return "Good afternoon!";
+  else return "Hello there!";
+}
 
-  if (sortedArr.length % 2 === 0) {
-    return (sortedArr[mid - 1] + sortedArr[mid]) / 2;
-  } else {
-    return sortedArr[mid];
-  }
-};
-
-const average = calculateAverage(scores);
-const median = calculateMedian(scores);
-
-console.log(`Average: ${average}`);
-console.log(`Median: ${median}`);
-
-// Test cases. These will confirm if your answer is correct.
-assert.equal(average, 86.375);
-assert.equal(median, 88.5);
-
-
+assert.equal(greet("morning"), "Good morning!");
+assert.equal(greet("afternoon"), "Good afternoon!");
+assert.equal(greet("evening"), "Hello there!");
+console.log("exercise complete!");

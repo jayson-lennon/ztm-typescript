@@ -8,8 +8,8 @@ import { strict as assert } from "assert";
 // resized as needed, and they can be used with various array methods to
 // perform common operations like sorting, filtering, and mapping.
 
-const numbers: number[] = [1, 2, 3];
-let letters: string[] = ["a", "b", "c"];
+const numbers = [1, 2, 3];
+let letters = ["a", "b", "c"];
 
 // Each piece of data within an array is called an 'element' or 'item'.
 // Elements are stored in the array starting from zero (0). These
@@ -46,7 +46,7 @@ const bob = names[1][0];
 const chuck = names[1][1];
 
 // If you want an empty array to start with, you can create one like this:
-const emptyArray: number[] = [];
+const emptyArray = [];
 
 // To add new elements to the end of the array:
 letters = ["a", "b", "c"];

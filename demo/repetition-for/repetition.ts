@@ -57,7 +57,7 @@ for (let i = 1; i < 20; i++) {
 // using `.length` will give us 3, but the highest index is 2. Therefore,
 // we want to loop while the counter is less than (and not equal) to the
 // length.
-const letters: string[] = ["a", "b", "c"];
+const letters = ["a", "b", "c"];
 for (let i = 0; i < letters.length; i++) {
   console.log(letters[i]);
 }

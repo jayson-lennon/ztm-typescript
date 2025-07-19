@@ -7,58 +7,48 @@
 // functions. They also support implicit return statements for one-liner
 // functions, which makes the code more readable.
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
 // Create a function expression / anonymous function:
-const sum = function (lhs: number, rhs: number): number {
-  return lhs + rhs;
+const square = function (x) {
+  return x * x;
 };
 
 // The same as above, using arrow function syntax:
-const arrowSum = (lhs: number, rhs: number): number => {
-  return lhs + rhs;
+const arrowSquare = (x) => x * x;
+
+const four = square(2);
+console.log(four);
+
+// Calling an arrow function is the same as calling a regular function:
+const nine = arrowSquare(3);
+console.log(nine);
+
+// Arrow functions make it possible to access `this` in an object:
+const person = {
+  name: "Alice",
+
+  // Method containing a nested function (does not work as expected). Run with
+  // `node` instead of `pnpm exec ts-node`. TypeScript will produce an error
+  // here.
+  logName() {
+    const sayHello = function () {
+      console.log("My name is", this.name); // "My name is undefined"
+    };
+
+    sayHello();
+  },
+
+  // Method containing a nested arrow function (works correctly)
+  logNameArrow() {
+    const sayHello = () => {
+      // `this` refers to `person`
+      console.log("My name is", this.name); // "My name is Alice"
+    };
+
+    sayHello();
+  },
 };
 
-// Both functions can be called the same way:
-const two = sum(1, 1);
-const four = arrowSum(2, 2);
-
-// This is useful for defining functions within functions.
-//
-// You should prefer to always use arrow functions in all contexts
-// _except_ when you define a "regular" function:
-function regularFunction() {}
-
-// Everywhere else should use arrow functions:
-const arrowFunction = () => {};
-
-// We can also use function expressions to call functions with functions.
-
-// Type alias for a function which can perform basic calculations.
-// Notice there is no function body. It will be defined later.
-type calculationFn = (lhs: number, rhs: number) => number;
-
-// `calculate` function accepts the above type alias along with two numbers.
-function calculate(fn: calculationFn, lhs: number, rhs: number): number {
-  // `fn` is a function (or function expression) with signature
-  // `(number, number): number`. This allows us to forward the `lhs` and `rhs`
-  // passed to `calculate` to the `calculationFn`.
-  //
-  // Call like we would any other function:
-  return fn(lhs, rhs);
-}
-
-// We use the `arrowSum` function expression that we created earlier:
-const ten = calculate(arrowSum, 5, 5);
-
-// We can also use a regular function. Just like a function expression,
-// the function signature must match in order to use it.
-const twenty = calculate(sum, ten, ten);
-
-// Add more functionality with a function expression to calculate
-// the remainder of dividing two numbers:
-const remainder = (lhs: number, rhs: number): number => {
-  return lhs % rhs;
-};
-
-// Use `remainder` as we did `sum`:
-const one = calculate(remainder, 4, 3);
-
+person.logName();
+person.logNameArrow();

@@ -23,3 +23,15 @@ console.log(person.age); // 30
 person.age = 35;
 console.log(person.age); // 35
 
+// Objects can also have methods associated with them. We use the `this`
+// keyword to access the current object.
+const user = {
+  name: "Bob",
+  age: 30,
+  greet() {
+    console.log(`Hi, I'm ${this.name} and I am ${this.age} years old.`);
+  }
+};
+
+// We can call the method using a dot(.) followed by the method name:
+user.greet();

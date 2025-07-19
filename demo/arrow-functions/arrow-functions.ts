@@ -14,11 +14,11 @@ const square = function (x) {
   return x * x;
 };
 
-// The same as above, using arrow function syntax:
-const arrowSquare = (x) => x * x;
-
 const four = square(2);
 console.log(four);
+
+// The same as above, using arrow function syntax:
+const arrowSquare = (x) => x * x;
 
 // Calling an arrow function is the same as calling a regular function:
 const nine = arrowSquare(3);

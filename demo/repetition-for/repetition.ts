@@ -46,19 +46,3 @@ for (let i = 1; i < 20; i++) {
   console.log(`${i}`);
 }
 
-// We can use loops to access all elements within an array.
-//
-// This isn't the recommended to iterate through an array, but it is simple
-// and you will very likely encounter it when working on different codebases.
-//
-// The `.length` field on arrays tells us how many elements are available.
-// We can use this to stop the loop once we get to the end of the array.
-// Remember that arrays start at index 0. So if there are three elements,
-// using `.length` will give us 3, but the highest index is 2. Therefore,
-// we want to loop while the counter is less than (and not equal) to the
-// length.
-const letters = ["a", "b", "c"];
-for (let i = 0; i < letters.length; i++) {
-  console.log(letters[i]);
-}
-

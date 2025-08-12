@@ -5,35 +5,45 @@ import { strict as assert } from "assert";
 // allows programmers to control the flow of their code based on certain
 // conditions or events.
 
-const answer = 2 + 2;
-assert.equal(answer, 4);
+const age = 25;
 
-if (answer > 4) {
-  console.log(`answer is greater than four`);
-}
-
-if (answer === 4) {
-  console.log(`answer is 4`);
+if (age >= 18) {
+  console.log("You are an adult.");
 } else {
-  console.log(`answer is not 4`);
+  console.log("You are not yet an adult.");
 }
 
-if (answer < 4) {
-  console.log(`answer is less than 4`);
-} else if (answer > 4) {
-  console.log(`answer is greater than 4`);
+const score = 85;
+let grade;
+
+if (score >= 90) {
+  grade = "A";
+} else if (score >= 80) {
+  grade = "B";
+} else if (score >= 70) {
+  grade = "C";
+} else if (score >= 60) {
+  grade = "D";
 } else {
-  console.log(`answer is 4`);
+  grade = "F";
 }
 
-const age = 6;
-const likesHavingFun = true;
+console.log(`Your grade is: ${grade}`);
 
-if (age <= 12 && likesHavingFun) {
-  // play at the park
-} else if (age > 12 && !likesHavingFun) {
-  // be bored
+let isMember = true;
+let hasPaidDues = false;
+
+if (isMember && hasPaidDues) {
+  console.log("You have full access to club amenities.");
 } else {
-  // work on hobbies
+  console.log("Your access is limited.");
 }
 
+let isStudent = false;
+let hasCoupon = true;
+
+if (isStudent || hasCoupon) {
+  console.log("You are eligible for a discount.");
+} else {
+  console.log("No discount applies.");
+}

@@ -10,27 +10,27 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
 {
-  function square(x) {
+  function double(x) {
     return x * x;
   }
 }
 
 {
   // Create a function expression / anonymous function:
-  const square = function (x) {
+  const double = function (x) {
     return x * x;
   };
 
-  const four = square(2);
+  const four = double(2);
   console.log(four);
 }
 
 {
   // The same as above, using arrow function syntax:
-  const square = (x) => x * x;
+  const double = (x) => x * x;
 
   // Calling an arrow function is the same as calling a regular function:
-  const nine = square(3);
+  const nine = double(3);
   console.log(nine);
 
 

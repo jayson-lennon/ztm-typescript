@@ -9,18 +9,29 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-// Create a function expression / anonymous function:
-const square = function (x) {
-  return x * x;
-};
+{
+  function square(x) {
+    return x * x;
+  }
+}
 
-const four = square(2);
-console.log(four);
+{
+  // Create a function expression / anonymous function:
+  const square = function (x) {
+    return x * x;
+  };
 
-// The same as above, using arrow function syntax:
-const arrowSquare = (x) => x * x;
+  const four = square(2);
+  console.log(four);
+}
 
-// Calling an arrow function is the same as calling a regular function:
-const nine = arrowSquare(3);
-console.log(nine);
+{
+  // The same as above, using arrow function syntax:
+  const square = (x) => x * x;
 
+  // Calling an arrow function is the same as calling a regular function:
+  const nine = square(3);
+  console.log(nine);
+
+
+}

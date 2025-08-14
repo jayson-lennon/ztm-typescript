@@ -21,8 +21,8 @@ letters = ["a", "b", "c"];
 const b = letters[1];
 assert.equal(b, "b");
 
-// Updating the array is similar to accessing, except we switch the
-// position of the array access:
+// Updating the array is similar to accessing, except we move the array access
+// to the left hand side of the equals:
 letters[1] = "z";
 assert(letters[1] === "z");
 assert.deepEqual(letters, ["a", "z", "c"]);

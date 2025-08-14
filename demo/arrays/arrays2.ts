@@ -1,23 +1,20 @@
 /* eslint-disable */
-import { strict as assert } from "assert";
+// import { strict as assert } from "assert";
 
-const numbers: number[] = [1, 2, 3];
+// An array of user IDs (simple numbers)
+let userIds = [101, 102, 103];
 
-let letters: string[] = ["a", "b", "c"];
+// An array of security PINs (strings to preserve leading zeros)
+let securityPins = ["0011", "0022", "0033"];
 
-// error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'
-// letters.push(1);
+// This is correct
+userIds.push(104);
 
-function incrementNumbers(numbers: number[]): number[] {
-  for (let i = 0; i < numbers.length; i++) {
-    numbers[i] += 1;
-  }
-  return numbers;
-  // alternate
-  // return numbers.map(number => number + 1);
-}
+// This is an easy mistake to make, as a developer might see "105" and not realize
+// that it needs to be a string. TypeScript prevents this.
+// Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+securityPins.push(105);
 
-const input = [1, 2, 3];
-const result = incrementNumbers(input);
-console.log(result); // [2, 3, 4]
-
+// This is another easy mistake, trying to add a string to a number array.
+// Error: Argument of type 'string' is not assignable to parameter of type 'number'.
+userIds.push("106");

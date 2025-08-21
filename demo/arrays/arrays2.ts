@@ -18,3 +18,4 @@ securityPins.push(105);
 // This is another easy mistake, trying to add a string to a number array.
 // Error: Argument of type 'string' is not assignable to parameter of type 'number'.
 userIds.push("106");
+

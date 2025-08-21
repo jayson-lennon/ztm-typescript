@@ -28,5 +28,10 @@ function logUser(user: UserProfile) {
   console.log(`${user.username} <${email}>`);
 }
 
-logUser(profile1);  // `bob <not provided>`
-logUser(profile2);  // `carol <carol@example.com>`
+function logUser2(user: UserProfile) {
+  const email = user.email ?? "not provided";
+  console.log(`${user.username} <${email}>`);
+}
+
+logUser2(profile1);  // `bob <not provided>`
+logUser2(profile2);  // `carol <carol@example.com>`

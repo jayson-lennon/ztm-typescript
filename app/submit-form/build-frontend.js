@@ -35,3 +35,4 @@ browserify()
   .pipe(outputFile);
 
 copyFiles("assets/static/weather-icons/reshot/*.svg", "dist/static/img/");
+

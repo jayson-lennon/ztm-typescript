@@ -33,4 +33,3 @@ const book2 = { title: "Book 2", author: "Author 2", year: 2022 };
 const book3 = { title: "Book 3", author: "Author 3", year: 2023 };
 const libraryBooks = [book1, book2];
 
-

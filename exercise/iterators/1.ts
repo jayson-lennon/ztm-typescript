@@ -21,4 +21,4 @@ const products = [
 // Product: Smartphone, Price: $499.99
 // Product: Tablet, Price: $299.99
 // Product: Headphones, Price: $99.99
-//
+

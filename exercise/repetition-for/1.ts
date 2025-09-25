@@ -14,4 +14,3 @@ import { strict as assert } from "assert";
 
 const scores = [90, 77, 83, 96, 76, 88];
 
-

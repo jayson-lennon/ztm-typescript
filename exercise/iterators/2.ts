@@ -21,4 +21,3 @@ const tasks = [
 // Incomplete Task: Design UI mockups
 // Incomplete Task: Develop backend API
 // Incomplete Task: Deploy to production
-//

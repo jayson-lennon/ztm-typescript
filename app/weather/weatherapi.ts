@@ -29,4 +29,3 @@ const weatherCodes: Record<number, string> = {
   99: "Thunderstorm with heavy hail",
 };
 
-

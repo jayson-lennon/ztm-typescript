@@ -18,3 +18,4 @@ processInput(42);               // Output: Processing number: 42
 processInput("");               // Output: Processing string: 
 processInput(0);                // Output: Processing number: 0
 
+

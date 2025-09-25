@@ -36,3 +36,4 @@ assert.deepStrictEqual(clickEvents, [
 
 assert.equal(clickEventCount, 2);
 
+

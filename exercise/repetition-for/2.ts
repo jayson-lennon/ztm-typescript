@@ -9,4 +9,3 @@ import { strict as assert } from "assert";
 
 const nums = [5, 4, 3, 2, 1];
 
-

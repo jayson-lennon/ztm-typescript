@@ -9,3 +9,4 @@ import { strict as assert } from "assert";
   };
   console.log(alice); // `{ name: 'Alice', age: 30 }`
 }
+

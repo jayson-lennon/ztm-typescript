@@ -31,3 +31,4 @@ const weatherCodeToImage = (code: number): string => {
     default: return "/static/img/info.svg";
   }
 };
+

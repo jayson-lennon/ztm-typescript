@@ -76,3 +76,4 @@ testTheater.removeShowtime("a", "18:00");
 assert.deepEqual(testTheater.getShowtimes("a"), ["21:00"]);
 assert.deepEqual(testTheater.getShowtimes("b"), ["20:00"]);
 
+

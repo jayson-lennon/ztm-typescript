@@ -34,4 +34,3 @@ const isRaining = true;
 //
 // Put your code here to check if it's raining
 //
-//

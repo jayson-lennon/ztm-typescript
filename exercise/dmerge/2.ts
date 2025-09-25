@@ -20,4 +20,3 @@
 //   like, and print their details including the new properties.
 //   - Only print the new properties if they are not null.
 
-

@@ -8,3 +8,4 @@ export default defineConfig({
     checker({ typescript: true }),
   ],
 });
+

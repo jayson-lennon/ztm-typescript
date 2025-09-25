@@ -55,3 +55,4 @@
 {
   const word = "JavaScript";
 }
+

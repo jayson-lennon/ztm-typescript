@@ -37,4 +37,3 @@ const bob = {
   enrollments: ["Algorithms"],
 }
 
-

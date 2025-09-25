@@ -35,3 +35,4 @@ assert.equal(myBook.isCheckedOut, true);
 //
 assert.equal(myBook.isCheckedOut, false);
 
+

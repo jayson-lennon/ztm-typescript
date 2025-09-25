@@ -22,3 +22,4 @@ function fullName(first: string, last: string): string {
 
 console.log(fullName(firstName(), lastName()));
 
+

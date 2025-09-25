@@ -26,3 +26,4 @@ function displayGreeting(name: PersonName) {
   console.log(`Name is ${name}`);
 }
 
+

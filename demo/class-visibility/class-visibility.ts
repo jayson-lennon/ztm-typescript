@@ -81,3 +81,4 @@ assert.equal(
 );
 // assert.equal(mary.getAge(), 25); // Error: Property 'age' is private and only accessible within class 'Person'.
 //
+

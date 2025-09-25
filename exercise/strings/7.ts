@@ -20,3 +20,4 @@ assert.strictEqual(isValidUsername("tim"), true);
 assert.strictEqual(isValidUsername("Sophia Ann Middleton"), true);
 assert.strictEqual(isValidUsername("superlongusername1234"), false);
 console.log("exercise complete!");
+

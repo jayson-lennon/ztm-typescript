@@ -23,3 +23,4 @@ function combineFilename(baseName, extension) {
 assert.strictEqual(combineFilename("report", "txt"), "report.txt");
 assert.strictEqual(combineFilename("photo", "jpg"), "photo.jpg");
 console.log("exercise complete!");
+

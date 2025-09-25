@@ -101,4 +101,3 @@ class Customer implements CustomerInfo {
 // use an interface. If you want to make your code more readable by reducing a
 // complex type name, then you should use a type alias.
 //
-//

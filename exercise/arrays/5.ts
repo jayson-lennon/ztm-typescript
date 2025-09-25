@@ -15,3 +15,4 @@ function reverseArray(arr) {
 assert.equal(JSON.stringify(reverseArray([1, 2, 3])), JSON.stringify([3, 2, 1]));
 assert.equal(JSON.stringify(reverseArray(["a", "b", "c"])), JSON.stringify(["c", "b", "a"]));
 console.log("exercise complete!");
+

@@ -25,3 +25,4 @@ const totalPeople = `There are ${kids + adults} people`;
 console.log(`${totalPeople} to seat at the restaurant.`);
 
 
+

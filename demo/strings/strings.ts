@@ -78,3 +78,4 @@
   const word = "JavaScript";
   console.log(word.length); // 10
 }
+

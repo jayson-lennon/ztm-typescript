@@ -16,3 +16,4 @@ assert.equal(sumEvenNumbers([1, 2, 3, 4, 5]), 6);
 assert.equal(sumEvenNumbers([10, 20, 30, 40]), 100);
 assert.equal(sumEvenNumbers([-2, -4, 0]), -6);
 console.log("exercise complete!");
+

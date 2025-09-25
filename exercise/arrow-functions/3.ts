@@ -14,3 +14,4 @@ const solution = (name, age) => `My name is ${name} and I am ${age} years old.`;
 
 assert.equal(getIntro("Alice", 25), "My name is Alice and I am 25 years old.");
 console.log("exercise complete!");
+

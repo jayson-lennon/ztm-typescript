@@ -29,3 +29,4 @@ function copyFiles(pattern, destination) {
 fs.mkdirSync("./dist", { recursive: true });
 
 copyFiles("assets/static/weather-icons/reshot/*.svg", "dist/static/img/");
+

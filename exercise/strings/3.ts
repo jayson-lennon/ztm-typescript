@@ -18,3 +18,4 @@ function findKeywordIndex(documentText, keyword) {
 assert.strictEqual(findKeywordIndex("The quick brown fox jumps over the lazy dog", "fox"), 16);
 assert.strictEqual(findKeywordIndex("Hello world", "moon"), -1);
 console.log("exercise complete!");
+

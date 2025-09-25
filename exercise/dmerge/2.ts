@@ -80,3 +80,4 @@ if (truck.numberOfAxles != null) {
   console.log(`Number of Axles: ${truck.numberOfAxles} `); // Number of Axles: 2
 }
 
+

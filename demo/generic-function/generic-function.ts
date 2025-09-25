@@ -129,3 +129,4 @@ assert.equal(getArea(smallSquare), 1);
 // ERROR: argument of type `string` is not assignable to parameter of type
 // `Area`
 //
+//

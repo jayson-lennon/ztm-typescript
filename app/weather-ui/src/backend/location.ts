@@ -34,3 +34,4 @@ export async function fetchLocationData(axios: AxiosStatic, apiUrl: string, loca
   }
 }
 
+

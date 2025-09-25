@@ -68,3 +68,4 @@ it("throws error when the API response changes", async () => {
   // this will throw an error if it fails, which will mark the test as a failure
   await expect(fetchLocationData(axios, GEOCODE_API_URL, "test")).rejects.toThrow();
 });
+

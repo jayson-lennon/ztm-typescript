@@ -25,3 +25,4 @@ for (const product of products) {
 // Product: Tablet, Price: $299.99
 // Product: Headphones, Price: $99.99
 //
+//

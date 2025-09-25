@@ -98,3 +98,4 @@ assert.equal(case1, "Message: You have a new message.");
 assert.equal(case2, "Error 404: Page not found.");
 assert.equal(case3, "Success: Operation completed successfully.");
 
+

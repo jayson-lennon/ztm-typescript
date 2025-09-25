@@ -74,3 +74,4 @@ import { strict as assert } from "assert";
   assert.equal(calculate("divide", 10, 2), 5)
   assert.equal(calculate("subtract", 10, 2), 8)
 }
+

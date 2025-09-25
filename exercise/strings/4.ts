@@ -23,3 +23,4 @@ function getURLPath(url) {
 assert.strictEqual(getURLPath("https://example.com/path/to/page"), "example.com/path/to/page");
 assert.strictEqual(getURLPath("http://localhost:3000/users"), "localhost:3000/users");
 console.log("exercise complete!");
+

@@ -18,3 +18,4 @@ function cleanComment(comment) {
 assert.strictEqual(cleanComment("   Hello, world!   "), "Hello, world!");
 assert.strictEqual(cleanComment("No extra spaces"), "No extra spaces");
 console.log("exercise complete!");
+

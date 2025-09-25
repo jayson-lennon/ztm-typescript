@@ -35,3 +35,4 @@ function logUser2(user: UserProfile) {
 
 logUser2(profile1);  // `bob <not provided>`
 logUser2(profile2);  // `carol <carol@example.com>`
+

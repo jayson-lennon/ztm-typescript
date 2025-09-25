@@ -23,3 +23,4 @@ const average = calculateAverage(numbers);
 
 assert.equal(average, 3);
 
+

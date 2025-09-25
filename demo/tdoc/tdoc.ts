@@ -43,3 +43,4 @@ export async function fetchUser(id: number): Promise<User> {
   return response.json() as Promise<User>;
 }
 
+

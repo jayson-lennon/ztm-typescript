@@ -34,3 +34,4 @@ const user: User = {
 // Call the function to get the user's name and age
 console.log(getUserInfo(user)); // Output: John Doe is 30 years old.
 
+

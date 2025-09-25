@@ -59,3 +59,4 @@ const circle: Shape = { kind: "circle", radius: 2 };
 assert.equal(calculateArea(square), 25);
 assert.equal(calculateArea(circle), Math.PI * 2 ** 2);
 
+

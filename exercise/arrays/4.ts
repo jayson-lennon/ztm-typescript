@@ -13,3 +13,4 @@ function filterLongStrings(strings) {
 assert.equal(JSON.stringify(filterLongStrings(["hi", "hello", "worldwide"])), JSON.stringify(["worldwide"]));
 assert.equal(filterLongStrings(["a", "abc", "abcd", "abcdef"]).length, 1);
 console.log("exercise complete!");
+

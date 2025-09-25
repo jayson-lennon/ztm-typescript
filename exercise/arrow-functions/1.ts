@@ -15,3 +15,4 @@ const solution = (a, b) => a + b;
 assert.equal(add(3, 5), 8);
 assert.equal(add(-2, 7), 5);
 console.log("exercise complete!");
+

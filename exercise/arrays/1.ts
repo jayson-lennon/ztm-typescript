@@ -76,3 +76,4 @@ assert.deepEqual(newRanking, [5, 4, 3, 2, 1]);
 assert.deepEqual(newTeams, ["pink", "blue", "red", "yellow", "green"]);
 
 console.log("exercise complete!");
+

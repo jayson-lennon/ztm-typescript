@@ -22,3 +22,4 @@ assert.strictEqual(generateEmailMessage("Hello [name], your order [orderID] is r
 assert.strictEqual(generateEmailMessage("[name], your [orderID] has been shipped.", "Bob", "67890"),
   "Bob, your 67890 has been shipped.");
 console.log("exercise complete!");
+

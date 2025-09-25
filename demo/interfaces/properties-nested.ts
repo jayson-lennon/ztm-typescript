@@ -26,3 +26,4 @@ const userWithAddress: User = {
 
 console.log(userWithAddress);
 // `{ name: 'David', age: 28, address: { street: '123 Main St', city: 'New York' } }`
+

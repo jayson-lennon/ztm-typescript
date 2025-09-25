@@ -35,3 +35,4 @@ const user = {
 
 // We can call the method using a dot(.) followed by the method name:
 user.greet();
+

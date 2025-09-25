@@ -28,3 +28,4 @@ const feeExemption = false;
 const extraFee = !feeExemption && (packageWeight > 25 || packageLength > 40);
 assert.equal(extraFee, true);
 
+

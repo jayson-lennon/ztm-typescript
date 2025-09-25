@@ -30,3 +30,4 @@ scores.push(92);
 average = calcAverage(scores);
 assert.equal(average, 86);
 
+

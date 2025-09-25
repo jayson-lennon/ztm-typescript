@@ -55,3 +55,4 @@ assert.deepStrictEqual(updatedDuration,
 );
 
 console.log("exercise complete!");
+

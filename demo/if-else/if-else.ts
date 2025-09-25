@@ -47,3 +47,4 @@ if (isStudent || hasCoupon) {
 } else {
   console.log("No discount applies.");
 }
+

@@ -41,3 +41,4 @@ function sum(lhs: number, rhs: number): number {
 const four = sum(2, 2);
 assert.equal(four, 4);
 
+

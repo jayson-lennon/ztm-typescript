@@ -82,3 +82,4 @@ a.translate(-5, -5); // Point { x: 0, y: o }
 assert.deepEqual([a.x, a.y], [0, 0]);
 
 
+

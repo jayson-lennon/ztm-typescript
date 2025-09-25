@@ -32,3 +32,4 @@ function sendMessage(notifier: Notifier, message: string) {
 
 sendMessage(emailNotifier, "email message");
 sendMessage(smsNotifier, "text message");
+

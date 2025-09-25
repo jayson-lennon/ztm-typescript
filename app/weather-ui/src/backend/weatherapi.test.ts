@@ -131,3 +131,4 @@ it("gets condition", () => {
   const condition = currentWeather.condition();
   assert.equal(condition, "Clear sky");
 });
+
